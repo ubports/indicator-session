@@ -11,7 +11,6 @@ Build-Depends: cmake,
                libgtest-dev,
                liburl-dispatcher1-dev,
                python,
-               unity8-common
 Standards-Version: 3.9.3
 Homepage: https://launchpad.net/indicator-session
 # If you aren't a member of ~indicator-applet-developers but need to upload
@@ -27,6 +26,7 @@ Depends: ${shlibs:Depends},
          systemd-services,
          gnome-settings-daemon-schemas,
          gsettings-desktop-schemas,
+         unity-schemas (>= 7.4.1),
 Recommends: indicator-applet (>= 0.2) | indicator-renderer,
             gnome-screensaver,
             yelp,
