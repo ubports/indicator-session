@@ -11,6 +11,7 @@ Build-Depends: cmake,
                libgtest-dev,
                liburl-dispatcher1-dev,
                python,
+               unity8-schemas,
 Standards-Version: 3.9.3
 Homepage: https://launchpad.net/indicator-session
 # If you aren't a member of ~indicator-applet-developers but need to upload
