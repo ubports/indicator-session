@@ -455,7 +455,11 @@ create_admin_section (void)
   GMenu * menu;
   gchar * help_label = g_strdup_printf(_("%s Help…"), get_distro_name());
   menu = g_menu_new ();
-  g_menu_append (menu, _("About This Device…"), "indicator.about");
+  if (g_getenv ("MIR_SOCKET") != NULL) {
+      g_menu_append (menu, _("About This Device…"), "indicator.about");
+  } else {
+      g_menu_append (menu, _("About This Computer"), "indicator.about");
+  }
   g_menu_append (menu, help_label, "indicator.help");
   g_free (help_label);
 
