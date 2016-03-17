@@ -78,6 +78,8 @@ static const char * const menu_names[N_PROFILES] =
   "desktop_lockscreen"
 };
 
+static const char * const usage_mode_schema_name = "com.canonical.Unity8";
+
 struct ProfileMenuInfo
 {
   /* the root level -- the header is the only child of this */
@@ -98,12 +100,14 @@ struct _IndicatorSessionServicePrivate
   IndicatorSessionActions * backend_actions;
   GSettings * indicator_settings;
   GSettings * keybinding_settings;
+  GSettings * usage_mode_settings;
   GSimpleActionGroup * actions;
   guint actions_export_id;
   struct ProfileMenuInfo menus[N_PROFILES];
   GSimpleAction * header_action;
   GSimpleAction * user_switcher_action;
   GSimpleAction * guest_switcher_action;
+  GSimpleAction * usage_mode_action;
   GHashTable * users;
   GHashTable * reported_users;
   guint rebuild_id;
@@ -148,6 +152,11 @@ static inline void
 rebuild_settings_section_soon (IndicatorSessionService * self)
 {
   rebuild_soon (self, SECTION_SETTINGS);
+}
+static inline void
+rebuild_admin_section_soon (IndicatorSessionService * self)
+{
+  rebuild_soon (self, SECTION_ADMIN);
 }
 
 /***
@@ -413,15 +422,57 @@ get_distro_name (void)
   return distro_name;
 }
 
+static gboolean
+usage_mode_to_action_state(GValue *value,
+                           GVariant *variant,
+                           gpointer unused)
+{
+  const gchar* usage_mode = g_variant_get_string(variant, NULL);
+  GVariant* ret_var = g_variant_new_boolean(g_strcmp0(usage_mode, "Windowed") == 0 ? TRUE : FALSE);
+  g_value_set_variant(value, ret_var);
+  return TRUE;
+}
+
+static GVariant*
+action_state_to_usage_mode(const GValue *value,
+                           const GVariantType * unused_expected_type,
+                           gpointer unused)
+{
+  GVariant* var = g_value_get_variant(value);
+  GVariant* ret = g_variant_new_string(g_variant_get_boolean(var) == TRUE ? "Windowed" : "Staged");
+  return ret;
+}
+
+static void
+on_usage_mode_setting_changed (gpointer gself)
+{
+  rebuild_admin_section_soon((IndicatorSessionService*)(gself));
+}
+
 static GMenuModel *
-create_admin_section (void)
+create_admin_section (IndicatorSessionService * self)
 {
   GMenu * menu;
-  gchar * help_label = g_strdup_printf(_("%s Help"), get_distro_name());
+  priv_t * p = self->priv;
+  gchar * help_label = g_strdup_printf(_("%s Help…"), get_distro_name());
   menu = g_menu_new ();
-  g_menu_append (menu, _("About This Computer"), "indicator.about");
+  if (g_getenv ("MIR_SOCKET") != NULL) {
+      g_menu_append (menu, _("About This Device…"), "indicator.about");
+  } else {
+      g_menu_append (menu, _("About This Computer"), "indicator.about");
+  }
   g_menu_append (menu, help_label, "indicator.help");
   g_free (help_label);
+
+  if (p->usage_mode_action && g_getenv ("MIR_SOCKET") != NULL) // only under unity8
+  {
+      GMenuItem * menu_item = NULL;
+      menu_item = g_menu_item_new(_("Desktop mode"), "indicator.usage-mode");
+      g_menu_item_set_attribute(menu_item, "x-canonical-type", "s", "com.canonical.indicator.switch");
+      g_menu_append_item(menu, menu_item);
+      g_object_unref(menu_item);
+  }
+
   return G_MENU_MODEL (menu);
 }
 
@@ -822,7 +873,7 @@ create_menu (IndicatorSessionService * self, int profile)
 
   if (profile == PROFILE_DESKTOP)
     {
-      sections[n++] = create_admin_section ();
+      sections[n++] = create_admin_section (self);
       sections[n++] = create_settings_section (self);
       sections[n++] = create_switch_section (self, profile);
       sections[n++] = create_logout_section (self);
@@ -1012,12 +1063,32 @@ init_gactions (IndicatorSessionService * self)
   g_action_map_add_action (G_ACTION_MAP (p->actions), G_ACTION(a));
   p->guest_switcher_action = a;
 
-  /* add switch-to-user action... parameter is the uesrname */
+  /* add switch-to-user action... parameter is the username */
   v = create_user_switcher_state (self);
   a = g_simple_action_new_stateful ("switch-to-user", G_VARIANT_TYPE_STRING, v);
   g_signal_connect (a, "activate", G_CALLBACK(on_user_activated), self);
   g_action_map_add_action (G_ACTION_MAP (p->actions), G_ACTION(a));
   p->user_switcher_action = a;
+
+  /* add usage-mode action */
+  if (p->usage_mode_settings)
+    {
+      a = g_simple_action_new_stateful("usage-mode",
+                                       NULL,
+                                       g_variant_new_boolean(FALSE));
+      g_settings_bind_with_mapping(p->usage_mode_settings, "usage-mode",
+                                   a, "state",
+                                   G_SETTINGS_BIND_DEFAULT,
+                                   usage_mode_to_action_state,
+                                   action_state_to_usage_mode,
+                                   NULL,
+                                   NULL);
+
+      g_action_map_add_action(G_ACTION_MAP(p->actions), G_ACTION(a));
+      g_signal_connect_swapped(p->usage_mode_settings, "changed::usage-mode",
+                               G_CALLBACK(on_usage_mode_setting_changed), self);
+      p->usage_mode_action = a;
+    }
 
   /* add the header action */
   a = g_simple_action_new_stateful ("_header", NULL,
@@ -1060,7 +1131,7 @@ rebuild_now (IndicatorSessionService * self, int sections)
 
   if (sections & SECTION_ADMIN)
     {
-      rebuild_section (desktop->submenu, 0, create_admin_section());
+      rebuild_section (desktop->submenu, 0, create_admin_section(self));
     }
 
   if (sections & SECTION_SETTINGS)
@@ -1229,6 +1300,7 @@ indicator_session_service_init (IndicatorSessionService * self)
   priv_t * p;
   gpointer gp;
   GIcon * icon;
+  GSettingsSchema * usage_mode_schema;
 
   /* init our priv pointer */
   p = G_TYPE_INSTANCE_GET_PRIVATE (self,
@@ -1236,6 +1308,17 @@ indicator_session_service_init (IndicatorSessionService * self)
                                    IndicatorSessionServicePrivate);
   p->indicator_settings = g_settings_new ("com.canonical.indicator.session");
   p->keybinding_settings = g_settings_new ("org.gnome.settings-daemon.plugins.media-keys");
+
+  /* Only use unity8 schema if it's installed; this avoids a hard dependency
+     on unity8-schemas */
+  usage_mode_schema = g_settings_schema_source_lookup (g_settings_schema_source_get_default (),
+                                                       usage_mode_schema_name, TRUE);
+  if (usage_mode_schema)
+    {
+      p->usage_mode_settings = g_settings_new (usage_mode_schema_name);
+      g_settings_schema_unref (usage_mode_schema);
+    }
+
   self->priv = p;
 
   /* init the backend objects */
@@ -1402,6 +1485,7 @@ my_dispose (GObject * o)
   g_clear_object (&p->backend_actions);
   g_clear_object (&p->indicator_settings);
   g_clear_object (&p->keybinding_settings);
+  g_clear_object (&p->usage_mode_settings);
   g_clear_object (&p->actions);
 
   for (i=0; i<N_PROFILES; ++i)
@@ -1410,6 +1494,7 @@ my_dispose (GObject * o)
   g_clear_object (&p->header_action);
   g_clear_object (&p->user_switcher_action);
   g_clear_object (&p->guest_switcher_action);
+  g_clear_object (&p->usage_mode_action);
   g_clear_object (&p->conn);
 
   g_clear_pointer (&p->default_icon_serialized, g_variant_unref);

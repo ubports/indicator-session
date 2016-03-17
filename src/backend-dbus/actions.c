@@ -825,7 +825,10 @@ run_outside_app (const char * cmd)
 static void
 my_help (IndicatorSessionActions * self G_GNUC_UNUSED)
 {
-  run_outside_app ("yelp");
+  if (g_getenv ("MIR_SOCKET") != NULL)
+    url_dispatch_send("http://www.askubuntu.com", NULL, NULL);
+  else
+    run_outside_app ("yelp");
 }
 
 static gboolean
