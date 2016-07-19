@@ -1,0 +1,7 @@
+[Unit]
+Description=Indicator Session Service
+PartOf=graphical-session.target
+After=indicators-pre.target
+
+[Service]
+ExecStart=@pkglibexecdir@/indicator-session-service
