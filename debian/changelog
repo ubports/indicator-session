@@ -1,3 +1,10 @@
+indicator-session (12.10.5+16.04.20160412-0ubuntu2) yakkety; urgency=medium
+
+  * Replace systemd-services dependency (which does not exist any more) with
+    libpam-systemd, as what we really want here is logind.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Fri, 29 Apr 2016 18:35:30 +0200
+
 indicator-session (12.10.5+16.04.20160412-0ubuntu1) xenial; urgency=medium
 
   * Ensure we request the UI to verify restart availability on unity

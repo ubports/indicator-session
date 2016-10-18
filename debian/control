@@ -23,7 +23,7 @@ Package: indicator-session
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         systemd-services,
+         libpam-systemd,
          gnome-settings-daemon-schemas,
          gsettings-desktop-schemas,
 Recommends: indicator-applet (>= 0.2) | indicator-renderer,
