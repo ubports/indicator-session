@@ -27,10 +27,10 @@ Depends: ${shlibs:Depends},
          gnome-settings-daemon-schemas,
          gsettings-desktop-schemas,
 Recommends: indicator-applet (>= 0.2) | indicator-renderer,
-            gnome-screensaver,
+            gnome-screensaver | mate-screensaver,
             yelp,
-            unity-control-center | gnome-control-center,
-            unity-control-center-signon | gnome-control-center-signon
+            unity-control-center | gnome-control-center | mate-control-center,
+            unity-control-center-signon | gnome-control-center-signon | mate-control-center,
 Suggests: lightdm,
           apport,
           zenity

@@ -1,3 +1,10 @@
+indicator-session (12.10.5+16.04.20160412-0ubuntu3) yakkety; urgency=medium
+
+  * MATE proxies the name spaces required for session management. Add
+    mate-control-center to Recommends.
+
+ -- Martin Wimpress <code@flexion.org>  Fri, 01 Jul 2016 10:39:27 +0200
+
 indicator-session (12.10.5+16.04.20160412-0ubuntu2) yakkety; urgency=medium
 
   * Replace systemd-services dependency (which does not exist any more) with
