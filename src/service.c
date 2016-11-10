@@ -658,7 +658,6 @@ report_unusable_user (IndicatorSessionService * self, const IndicatorSessionUser
 
     g_free (uid_str);
   }
-
 }
 
 static GMenuModel *
