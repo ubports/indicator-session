@@ -30,8 +30,9 @@ include (FindPkgConfig)
 pkg_check_modules (SERVICE REQUIRED
                    glib-2.0>=2.36
                    gio-unix-2.0>=2.36
-                   url-dispatcher-1>=1)
-include_directories (${SERVICE_INCLUDE_DIRS})
+                   url-dispatcher-1>=1
+                   libwhoopsie)
+include_directories(${SERVICE_INCLUDE_DIRS})
 
 set (CC_WARNING_ARGS " -Wall -pedantic -Wextra -Wno-missing-field-initializers")
 

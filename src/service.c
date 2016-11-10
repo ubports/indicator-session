@@ -20,8 +20,9 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
+#include <libwhoopsie/recoverable-problem.h>
+
 #include "backend.h"
-#include "recoverable-problem.h"
 #include "service.h"
 
 #define BUS_NAME "com.canonical.indicator.session"
@@ -638,35 +639,26 @@ report_unusable_user (IndicatorSessionService * self, const IndicatorSessionUser
 
   if (!g_hash_table_contains (p->reported_users, key))
   {
-    gchar * uid_str;
-    GPtrArray * additional;
-    const gchar * const error_name = "indicator-session-unknown-user-error";
+    gchar * uid_str = g_strdup_printf("%u", u->uid);
 
-    /* don't spam apport with duplicates */
+    const char * properties[] = {
+        "uid", uid_str,
+        "icon_file", (u->icon_file ? u->icon_file : "(null)"),
+        "is_current_user", (u->is_current_user ? "true" : "false"),
+        "is_logged_in", (u->is_logged_in ? "true" : "false"),
+        "real_name", (u->real_name ? u->real_name : "(null)"),
+        "user_name", (u->user_name ? u->user_name : "(null)"),
+        NULL
+    };
+
+    whoopsie_report_recoverable_problem("indicator-session-unknown-user-error", 0, FALSE, properties);
+
+    /* mark it as reported so that we'll only report it once */
     g_hash_table_add (p->reported_users, key);
 
-    uid_str = g_strdup_printf("%u", u->uid);
-
-    additional = g_ptr_array_new (); /* null-terminated key/value pair strs */
-    g_ptr_array_add (additional, "uid");
-    g_ptr_array_add (additional, uid_str);
-    g_ptr_array_add (additional, "icon_file");
-    g_ptr_array_add (additional, u->icon_file ? u->icon_file : "(null)");
-    g_ptr_array_add (additional, "is_current_user");
-    g_ptr_array_add (additional, u->is_current_user ? "true" : "false");
-    g_ptr_array_add (additional, "is_logged_in");
-    g_ptr_array_add (additional, u->is_logged_in ? "true" : "false");
-    g_ptr_array_add (additional, "real_name");
-    g_ptr_array_add (additional, u->real_name ? u->real_name : "(null)");
-    g_ptr_array_add (additional, "user_name");
-    g_ptr_array_add (additional, u->user_name ? u->user_name : "(null)");
-    g_ptr_array_add (additional, NULL); /* null termination */
-    report_recoverable_problem(error_name, (GPid)0, FALSE, (gchar**)additional->pdata);
-
-    /* cleanup */
     g_free (uid_str);
-    g_ptr_array_free (additional, TRUE);
   }
+
 }
 
 static GMenuModel *
