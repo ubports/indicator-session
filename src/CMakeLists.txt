@@ -5,8 +5,6 @@ add_library (libindicatorsessionservice STATIC
              actions.h
              guest.c
              guest.h
-             recoverable-problem.c
-             recoverable-problem.h
              service.c
              service.h
              users.c
@@ -18,7 +16,7 @@ set (SERVICE_EXEC "indicator-session-service")
 set_property (SOURCE main.c
               APPEND PROPERTY COMPILE_DEFINITIONS
               GETTEXT_PACKAGE="${GETTEXT_PACKAGE}"
-              GNOMELOCALEDIR="@CMAKE_INSTALL_FULL_LOCALEDIR@")
+              GNOMELOCALEDIR="${CMAKE_INSTALL_FULL_LOCALEDIR}")
 add_executable (${SERVICE_EXEC} main.c)
 target_link_libraries (${SERVICE_EXEC} libindicatorsessionservice backenddbus ${SERVICE_LIBRARIES} ${GCOV_LIBS})
 install (TARGETS ${SERVICE_EXEC} RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_PKGLIBEXECDIR})
