@@ -54,3 +54,10 @@ add_dependencies (test-service libindicatorsessionservice backendmock)
 target_link_libraries (test-service libindicatorsessionservice backendmock ${SERVICE_LIBRARIES} ${GMOCK_LIBRARIES})
 
 add_subdirectory (backend-dbus)
+
+# coverage reporting
+set(COVERAGE_TEST_TARGETS
+  ${COVERAGE_TEST_TARGETS}
+  test-service
+  PARENT_SCOPE
+)
