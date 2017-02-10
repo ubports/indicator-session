@@ -1,4 +1,4 @@
-SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -g ${CC_WARNING_ARGS}")
+SET (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x ${CC_WARNING_ARGS}")
 
 # build desktopmock
 add_library (desktopmock STATIC

@@ -24,7 +24,7 @@ install (TARGETS ${SERVICE_EXEC} RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_PKGLIB
 # common properties
 set_property (TARGET libindicatorsessionservice ${SERVICE_EXEC}
               APPEND_STRING PROPERTY COMPILE_FLAGS
-              " -g ${CC_WARNING_ARGS}")
+              " ${CC_WARNING_ARGS}")
 
 # coverage reporting
 set(COVERAGE_TARGETS
