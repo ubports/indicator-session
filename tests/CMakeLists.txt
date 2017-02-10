@@ -1,3 +1,6 @@
+find_package(GMock)
+include_directories(${GMOCK_INCLUDE_DIRS})
+
 # build the necessary schemas
 set_directory_properties (PROPERTIES
                           ADDITIONAL_MAKE_CLEAN_FILES gschemas.compiled)
@@ -48,6 +51,6 @@ add_executable (test-service
 set_target_properties (test-service PROPERTIES COMPILE_FLAGS " ${CC_WARNING_ARGS} -std=c++0x -g")
 add_test (test-service test-service)
 add_dependencies (test-service libindicatorsessionservice backendmock)
-target_link_libraries (test-service libindicatorsessionservice backendmock gtest ${SERVICE_LIBRARIES} ${GTEST_LIBS})
+target_link_libraries (test-service libindicatorsessionservice backendmock ${SERVICE_LIBRARIES} ${GMOCK_LIBRARIES})
 
 add_subdirectory (backend-dbus)
