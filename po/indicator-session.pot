@@ -45,7 +45,7 @@ msgid "About This Computer"
 msgstr ""
 
 #: ../src/service.c:471
-msgid "Desktop mode"
+msgid "Desktop Mode"
 msgstr ""
 
 #: ../src/service.c:487

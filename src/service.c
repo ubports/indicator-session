@@ -468,7 +468,7 @@ create_admin_section (IndicatorSessionService * self)
   if (p->usage_mode_action && g_getenv ("MIR_SOCKET") != NULL) // only under unity8
   {
       GMenuItem * menu_item = NULL;
-      menu_item = g_menu_item_new(_("Desktop mode"), "indicator.usage-mode");
+      menu_item = g_menu_item_new(_("Desktop Mode"), "indicator.usage-mode");
       g_menu_item_set_attribute(menu_item, "x-canonical-type", "s", "com.canonical.indicator.switch");
       g_menu_append_item(menu, menu_item);
       g_object_unref(menu_item);
