@@ -55,7 +55,7 @@ set_source_files_properties (${SOURCES}
 include_directories (${CMAKE_CURRENT_BINARY_DIR} ${SERVICE_INCLUDE_DIRS})
 
 add_library (backenddbus STATIC ${SOURCES} ${BACKEND_GENERATED_SOURCES})
- 
+
 # coverage reporting
 set(COVERAGE_TARGETS
   ${COVERAGE_TARGETS}
