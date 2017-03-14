@@ -1,3 +1,9 @@
+indicator-session (12.10.5+17.04.20170314-0ubuntu1) zesty; urgency=medium
+
+  * Switch to using cmake-extras macros instead of vendored ones
+
+ -- Pete Woods <pete.woods@canonical.com>  Tue, 14 Mar 2017 10:23:58 +0000
+
 indicator-session (12.10.5+17.04.20170309-0ubuntu1) zesty; urgency=medium
 
   * Rename "Desktop mode" switch to "Desktop Mode" to match
