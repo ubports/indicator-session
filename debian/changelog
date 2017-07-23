@@ -1,3 +1,9 @@
+indicator-session (12.10.6+ubports) vivid; urgency=medium
+
+  * Imported to UBports
+
+ -- UBports auto importer <infra@ubports.com>  Sunday, 23 July 2017 02:08:14 +0200
+
 indicator-session (12.10.5+17.04.20161021-0ubuntu1) zesty; urgency=medium
 
   [ Ted Gould ]
