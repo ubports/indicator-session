@@ -454,7 +454,7 @@ create_admin_section (IndicatorSessionService * self)
 {
   GMenu * menu;
   priv_t * p = self->priv;
-  gchar * help_label = g_strdup_printf(_("%s Help…"), get_distro_name());
+  gchar * help_label = g_strdup_printf(_("%s Help…"), "UBports");
   menu = g_menu_new ();
   if (g_getenv ("MIR_SOCKET") != NULL) {
       g_menu_append (menu, _("About This Device…"), "indicator.about");
