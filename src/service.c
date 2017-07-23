@@ -463,6 +463,7 @@ create_admin_section (IndicatorSessionService * self)
   }
   g_menu_append (menu, help_label, "indicator.help");
   g_free (help_label);
+  g_menu_append (menu, _("Report a bug"), "indicator.bug");
 
   if (p->usage_mode_action && g_getenv ("MIR_SOCKET") != NULL) // only under unity8
   {
@@ -947,6 +948,14 @@ on_help_activated (GSimpleAction  * a      G_GNUC_UNUSED,
 }
 
 static void
+on_bug_activated (GSimpleAction  * a      G_GNUC_UNUSED,
+                   GVariant       * param  G_GNUC_UNUSED,
+                   gpointer         gself)
+{
+  indicator_session_actions_bug (get_backend_actions(gself));
+}
+
+static void
 on_settings_activated (GSimpleAction * a      G_GNUC_UNUSED,
                        GVariant      * param  G_GNUC_UNUSED,
                        gpointer        gself)
@@ -1038,6 +1047,7 @@ init_gactions (IndicatorSessionService * self)
   GActionEntry entries[] = {
     { "about",                  on_about_activated           },
     { "help",                   on_help_activated            },
+    { "bug",                    on_bug_activated             },
     { "hibernate",              on_hibernate_activated       },
     { "logout",                 on_logout_activated          },
     { "online-accounts",        on_online_accounts_activated },
