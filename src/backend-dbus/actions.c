@@ -837,6 +837,15 @@ my_help (IndicatorSessionActions * self G_GNUC_UNUSED)
     run_outside_app ("yelp");
 }
 
+static void
+my_bug (IndicatorSessionActions * self G_GNUC_UNUSED)
+{
+  if (g_getenv ("MIR_SOCKET") != NULL)
+    url_dispatch_send("https://github.com/ubports/ubports-touch/issues", NULL, NULL);
+  else
+    run_outside_app ("firefox https://github.com/ubports/ubports-touch/issues");
+}
+
 static gboolean
 have_unity_control_center (void)
 {
@@ -1066,6 +1075,7 @@ indicator_session_actions_dbus_class_init (IndicatorSessionActionsDbusClass * kl
   actions_class->settings = my_settings;
   actions_class->online_accounts = my_online_accounts;
   actions_class->help = my_help;
+  actions_class->bug = my_bug;
   actions_class->about = my_about;
   actions_class->switch_to_screensaver = my_switch_to_screensaver;
   actions_class->switch_to_greeter = my_switch_to_greeter;
