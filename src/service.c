@@ -392,8 +392,8 @@ get_os_release (void)
               val = g_strdup(in);
               g_clear_error(&error);
             }
- 
-          g_debug("from \"%s\": key [%s] val [%s]", os_release, key->str, val); 
+
+          g_debug("from \"%s\": key [%s] val [%s]", os_release, key->str, val);
           g_hash_table_insert (hash, g_strdup(key->str), val); /* hash owns val now */
         }
 
@@ -454,7 +454,7 @@ create_admin_section (IndicatorSessionService * self)
 {
   GMenu * menu;
   priv_t * p = self->priv;
-  gchar * help_label = g_strdup_printf(_("%s Help…"), "UBports");
+  gchar * help_label = g_strdup_printf(_("%s Help…"), "UBports"); //HACK use get_distro_name() instead
   menu = g_menu_new ();
   if (g_getenv ("MIR_SOCKET") != NULL) {
       g_menu_append (menu, _("About This Device…"), "indicator.about");
@@ -511,7 +511,7 @@ create_guest_switcher_state (IndicatorSessionService * self)
 }
 
 /**
- * The switch-to-user action's state is a dictionary with these entries: 
+ * The switch-to-user action's state is a dictionary with these entries:
  *  - "active-user" (username string)
  *  - "logged-in-users" (array of username strings)
  */
@@ -841,14 +841,14 @@ create_session_section (IndicatorSessionService * self, int profile)
   if (indicator_session_actions_can_hibernate (p->backend_actions))
     g_menu_append (menu, _("Hibernate"), "indicator.hibernate");
 
-  if (profile != PROFILE_LOCKSCREEN && 
+  if (profile != PROFILE_LOCKSCREEN &&
     indicator_session_actions_can_reboot (p->backend_actions))
     {
       const char * label = ellipsis ? _("Restart…") : _("Restart");
       g_menu_append (menu, label, "indicator.reboot");
     }
 
-  if (profile != PROFILE_LOCKSCREEN && 
+  if (profile != PROFILE_LOCKSCREEN &&
     !g_settings_get_boolean (s, "suppress-shutdown-menuitem"))
     {
       const char * label = ellipsis ? _("Shut Down…") : _("Shut Down");
@@ -1415,13 +1415,13 @@ my_get_property (GObject     * o,
                   GParamSpec  * pspec)
 {
   IndicatorSessionService * self = INDICATOR_SESSION_SERVICE (o);
- 
+
   switch (property_id)
     {
       case PROP_MAX_USERS:
         g_value_set_uint (value, self->priv->max_users);
         break;
- 
+
       default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (o, property_id, pspec);
     }
