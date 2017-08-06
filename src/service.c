@@ -463,7 +463,7 @@ create_admin_section (IndicatorSessionService * self)
   }
   g_menu_append (menu, help_label, "indicator.help");
   g_free (help_label);
-  g_menu_append (menu, _("Report a bug"), "indicator.bug");
+  g_menu_append (menu, _("Report a bug..."), "indicator.bug");
 
   if (p->usage_mode_action && g_getenv ("MIR_SOCKET") != NULL) // only under unity8
   {
