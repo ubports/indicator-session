@@ -454,18 +454,13 @@ create_admin_section (IndicatorSessionService * self)
 {
   GMenu * menu;
   priv_t * p = self->priv;
-  gchar * help_label = g_strdup_printf(_("%s Help…"), "UBports"); //HACK use get_distro_name() instead
+
   menu = g_menu_new ();
-  if (g_getenv ("MIR_SOCKET") != NULL) {
-      g_menu_append (menu, _("About This Device…"), "indicator.about");
-  } else {
-      g_menu_append (menu, _("About This Computer"), "indicator.about");
-  }
-  g_menu_append (menu, help_label, "indicator.help");
-  g_free (help_label);
+  g_menu_append (menu, _("About This Device..."), "indicator.about");
+  g_menu_append (menu, g_strdup_printf(_("%s Help..."), "UBports"), "indicator.help"); // HACK use get_distro_name() instead
   g_menu_append (menu, _("Report a bug..."), "indicator.bug");
 
-  if (p->usage_mode_action && g_getenv ("MIR_SOCKET") != NULL) // only under unity8
+  if (p->usage_mode_action) // TODO Determine if this should be enabled on the phones as well
   {
       GMenuItem * menu_item = NULL;
       menu_item = g_menu_item_new(_("Desktop mode"), "indicator.usage-mode");
@@ -486,7 +481,7 @@ create_settings_section (IndicatorSessionService * self)
   menu = g_menu_new ();
   g_menu_append (menu, _("System Settings…"), "indicator.settings");
   if (indicator_session_actions_has_online_account_error (p->backend_actions))
-      g_menu_append (menu, _("Online Accounts…"), "indicator.online-accounts");
+    g_menu_append (menu, _("Online Accounts…"), "indicator.online-accounts");
 
   return G_MENU_MODEL (menu);
 }
