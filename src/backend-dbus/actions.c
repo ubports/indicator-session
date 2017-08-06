@@ -820,95 +820,33 @@ my_power_off (IndicatorSessionActions * actions)
 ***/
 
 static void
-run_outside_app (const char * cmd)
-{
-  GError * err = NULL;
-  g_debug ("%s calling \"%s\"", G_STRFUNC, cmd);
-  g_spawn_command_line_async (cmd, &err);
-  log_and_clear_error (&err, G_STRLOC, G_STRFUNC);
-}
-
-static void
 my_help (IndicatorSessionActions * self G_GNUC_UNUSED)
 {
-  if (g_getenv ("MIR_SOCKET") != NULL)
-    url_dispatch_send("https://forums.ubports.com/", NULL, NULL);
-  else
-    run_outside_app ("yelp");
+  url_dispatch_send("https://forums.ubports.com/", NULL, NULL);
 }
 
 static void
 my_bug (IndicatorSessionActions * self G_GNUC_UNUSED)
 {
-  if (g_getenv ("MIR_SOCKET") != NULL)
-    url_dispatch_send("https://github.com/ubports/ubports-touch/issues", NULL, NULL);
-  else
-    run_outside_app ("firefox https://github.com/ubports/ubports-touch/issues");
-}
-
-static gboolean
-have_unity_control_center (void)
-{
-  gchar *path;
-  const gchar *xdg_current_desktop;
-  gchar **desktop_names;
-  gboolean have_ucc;
-  gboolean is_unity;
-  int i;
-
-  is_unity = FALSE;
-  xdg_current_desktop = g_getenv ("XDG_CURRENT_DESKTOP");
-  if (xdg_current_desktop != NULL) {
-    desktop_names = g_strsplit (xdg_current_desktop, ":", 0);
-    for (i = 0; desktop_names[i]; ++i) {
-      if (!g_strcmp0 (desktop_names[i], "Unity")) {
-        is_unity = TRUE;
-      }
-    }
-    g_strfreev (desktop_names);
-  }
-
-  if (!is_unity)
-    return FALSE;
-
-  path = g_find_program_in_path ("unity-control-center");
-  have_ucc = path != NULL;
-  g_free (path);
-
-  return have_ucc;
+  url_dispatch_send("https://github.com/ubports/ubports-touch/issues", NULL, NULL);
 }
 
 static void
 my_settings (IndicatorSessionActions * self G_GNUC_UNUSED)
 {
-  if (g_getenv ("MIR_SOCKET") != NULL)
-    url_dispatch_send("settings:///system", NULL, NULL);
-  else if (have_unity_control_center ())
-    run_outside_app ("unity-control-center");
-  else
-    run_outside_app ("gnome-control-center");
+  url_dispatch_send("settings:///system", NULL, NULL);
 }
 
 static void
 my_online_accounts (IndicatorSessionActions * self G_GNUC_UNUSED)
 {
-  if (g_getenv ("MIR_SOCKET") != NULL)
-    url_dispatch_send("settings:///system/online-accounts", NULL, NULL);
-  else if (have_unity_control_center ())
-    run_outside_app ("unity-control-center credentials");
-  else
-    run_outside_app ("gnome-control-center credentials");
+  url_dispatch_send("settings:///system/online-accounts", NULL, NULL);
 }
 
 static void
 my_about (IndicatorSessionActions * self G_GNUC_UNUSED)
 {
-  if (g_getenv ("MIR_SOCKET") != NULL)
-    url_dispatch_send("settings:///system/about", NULL, NULL);
-  else if (have_unity_control_center ())
-    run_outside_app ("unity-control-center info");
-  else
-    run_outside_app ("gnome-control-center info");
+  url_dispatch_send("settings:///system/about", NULL, NULL);
 }
 
 /***
