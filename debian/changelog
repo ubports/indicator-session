@@ -1,8 +1,50 @@
-indicator-session (12.10.6+ubports) vivid; urgency=medium
+indicator-session (17.3.20+17.04.20170403-0ubuntu1) zesty; urgency=medium
 
-  * Imported to UBports
+  [ Pete ]
+  * Add phone indicator profiles.
 
- -- UBports auto importer <infra@ubports.com>  Sunday, 23 July 2017 02:08:14 +0200
+  [ Charles Kerr ]
+  * Handle "challenge" responses from login1 CanSuspend and CanHibernate
+    calls (LP: #1674389)
+
+ -- Pete Woods <pete.woods@canonical.com>  Mon, 03 Apr 2017 15:38:27 +0000
+
+indicator-session (12.10.5+17.04.20170314-0ubuntu1) zesty; urgency=medium
+
+  * Switch to using cmake-extras macros instead of vendored ones
+
+ -- Pete Woods <pete.woods@canonical.com>  Tue, 14 Mar 2017 10:23:58 +0000
+
+indicator-session (12.10.5+17.04.20170309-0ubuntu1) zesty; urgency=medium
+
+  * Rename "Desktop mode" switch to "Desktop Mode" to match
+    capitalization style
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 09 Mar 2017 16:02:14 +0000
+
+indicator-session (12.10.5+17.04.20170210-0ubuntu1) zesty; urgency=medium
+
+  * Remove old autostart files.
+  * Use gmock module from cmake-extras.
+  * Use coverage support from cmake-extras.
+  * Use intltool support from cmake-extras.
+
+ -- Rodney Dawes <rodney.dawes@canonical.com>  Fri, 10 Feb 2017 17:09:45 +0000
+
+indicator-session (12.10.5+17.04.20161201-0ubuntu1) zesty; urgency=medium
+
+  [ Michael Terry ]
+  * Work inside a snap by prefixing hard coded paths with $SNAP. (LP:
+    #1629009)
+
+ -- Rodney Dawes <rodney.dawes@canonical.com>  Thu, 01 Dec 2016 22:33:56 +0000
+
+indicator-session (12.10.5+17.04.20161114-0ubuntu1) zesty; urgency=medium
+
+  [ Charles Kerr ]
+  * Switch to libwhoopsie for recoverable problem support (LP: #1638716)
+
+ -- charles.kerr@canonical.com <charles.kerr@canonical.com>  Mon, 14 Nov 2016 22:31:37 +0000
 
 indicator-session (12.10.5+17.04.20161021-0ubuntu1) zesty; urgency=medium
 

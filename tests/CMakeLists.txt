@@ -1,3 +1,6 @@
+find_package(GMock)
+include_directories(${GMOCK_INCLUDE_DIRS})
+
 # build the necessary schemas
 set_directory_properties (PROPERTIES
                           ADDITIONAL_MAKE_CLEAN_FILES gschemas.compiled)
@@ -39,15 +42,22 @@ add_library (backendmock STATIC
              backend-mock-guest.h
              backend-mock-users.c
              backend-mock-users.h)
-set_target_properties (backendmock PROPERTIES COMPILE_FLAGS " ${CC_WARNING_ARGS} -g")
+set_target_properties (backendmock PROPERTIES COMPILE_FLAGS " ${CC_WARNING_ARGS}")
 
 # test-service
 add_executable (test-service
                 test-service.cc
                 gschemas.compiled)
-set_target_properties (test-service PROPERTIES COMPILE_FLAGS " ${CC_WARNING_ARGS} -std=c++0x -g")
+set_target_properties (test-service PROPERTIES COMPILE_FLAGS " ${CC_WARNING_ARGS} -std=c++0x")
 add_test (test-service test-service)
 add_dependencies (test-service libindicatorsessionservice backendmock)
-target_link_libraries (test-service libindicatorsessionservice backendmock gtest ${SERVICE_LIBRARIES} ${GTEST_LIBS})
+target_link_libraries (test-service libindicatorsessionservice backendmock ${SERVICE_LIBRARIES} ${GMOCK_LIBRARIES})
 
 add_subdirectory (backend-dbus)
+
+# coverage reporting
+set(COVERAGE_TEST_TARGETS
+  ${COVERAGE_TEST_TARGETS}
+  test-service
+  PARENT_SCOPE
+)

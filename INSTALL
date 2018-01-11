@@ -19,9 +19,10 @@ Compile-time build dependencies
  - gettext (gettext 0.18.1.1-10ubuntu3 or later)
  - glib (libglib2.0, 2.35.4 or later)
  - cmake (cmake, 2.8.9 or later)
+ - cmake-extras (cmake-extras, 0.10 or later)
  - gcovr (gcovr, 2.4 or later)
  - lcov (lcov, 1.9 or later)
- - google test (libgtest-dev, 1.6.0 or later)
+ - google test (googletest or google-mock, 1.6.0 or later)
  - cppcheck (cppcheck)
 
 Runtime DBus dependencies

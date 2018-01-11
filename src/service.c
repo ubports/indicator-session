@@ -20,8 +20,9 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
+#include <libwhoopsie/recoverable-problem.h>
+
 #include "backend.h"
-#include "recoverable-problem.h"
 #include "service.h"
 
 #define BUS_NAME "com.canonical.indicator.session"
@@ -392,8 +393,8 @@ get_os_release (void)
               val = g_strdup(in);
               g_clear_error(&error);
             }
-
-          g_debug("from \"%s\": key [%s] val [%s]", os_release, key->str, val);
+ 
+          g_debug("from \"%s\": key [%s] val [%s]", os_release, key->str, val); 
           g_hash_table_insert (hash, g_strdup(key->str), val); /* hash owns val now */
         }
 
@@ -425,7 +426,7 @@ get_distro_name (void)
 static gboolean
 usage_mode_to_action_state(GValue *value,
                            GVariant *variant,
-                           gpointer unused)
+                           gpointer unused G_GNUC_UNUSED)
 {
   const gchar* usage_mode = g_variant_get_string(variant, NULL);
   GVariant* ret_var = g_variant_new_boolean(g_strcmp0(usage_mode, "Windowed") == 0 ? TRUE : FALSE);
@@ -435,8 +436,8 @@ usage_mode_to_action_state(GValue *value,
 
 static GVariant*
 action_state_to_usage_mode(const GValue *value,
-                           const GVariantType * unused_expected_type,
-                           gpointer unused)
+                           const GVariantType * unused_expected_type G_GNUC_UNUSED,
+                           gpointer unused G_GNUC_UNUSED)
 {
   GVariant* var = g_value_get_variant(value);
   GVariant* ret = g_variant_new_string(g_variant_get_boolean(var) == TRUE ? "Windowed" : "Staged");
@@ -454,7 +455,7 @@ create_admin_section (IndicatorSessionService * self)
 {
   GMenu * menu;
   priv_t * p = self->priv;
-  gchar * help_label = g_strdup_printf(_("%s Help…"), "UBports"); //HACK use get_distro_name() instead
+  gchar * help_label = g_strdup_printf(_("%s Help…"), get_distro_name());
   menu = g_menu_new ();
   if (g_getenv ("MIR_SOCKET") != NULL) {
       g_menu_append (menu, _("About This Device…"), "indicator.about");
@@ -463,12 +464,11 @@ create_admin_section (IndicatorSessionService * self)
   }
   g_menu_append (menu, help_label, "indicator.help");
   g_free (help_label);
-  g_menu_append (menu, _("Report a bug"), "indicator.bug");
 
   if (p->usage_mode_action && g_getenv ("MIR_SOCKET") != NULL) // only under unity8
   {
       GMenuItem * menu_item = NULL;
-      menu_item = g_menu_item_new(_("Desktop mode"), "indicator.usage-mode");
+      menu_item = g_menu_item_new(_("Desktop Mode"), "indicator.usage-mode");
       g_menu_item_set_attribute(menu_item, "x-canonical-type", "s", "com.canonical.indicator.switch");
       g_menu_append_item(menu, menu_item);
       g_object_unref(menu_item);
@@ -512,7 +512,7 @@ create_guest_switcher_state (IndicatorSessionService * self)
 }
 
 /**
- * The switch-to-user action's state is a dictionary with these entries:
+ * The switch-to-user action's state is a dictionary with these entries: 
  *  - "active-user" (username string)
  *  - "logged-in-users" (array of username strings)
  */
@@ -639,34 +639,24 @@ report_unusable_user (IndicatorSessionService * self, const IndicatorSessionUser
 
   if (!g_hash_table_contains (p->reported_users, key))
   {
-    gchar * uid_str;
-    GPtrArray * additional;
-    const gchar * const error_name = "indicator-session-unknown-user-error";
+    gchar * uid_str = g_strdup_printf("%u", u->uid);
 
-    /* don't spam apport with duplicates */
+    const char * properties[] = {
+        "uid", uid_str,
+        "icon_file", (u->icon_file ? u->icon_file : "(null)"),
+        "is_current_user", (u->is_current_user ? "true" : "false"),
+        "is_logged_in", (u->is_logged_in ? "true" : "false"),
+        "real_name", (u->real_name ? u->real_name : "(null)"),
+        "user_name", (u->user_name ? u->user_name : "(null)"),
+        NULL
+    };
+
+    whoopsie_report_recoverable_problem("indicator-session-unknown-user-error", 0, FALSE, properties);
+
+    /* mark it as reported so that we'll only report it once */
     g_hash_table_add (p->reported_users, key);
 
-    uid_str = g_strdup_printf("%u", u->uid);
-
-    additional = g_ptr_array_new (); /* null-terminated key/value pair strs */
-    g_ptr_array_add (additional, "uid");
-    g_ptr_array_add (additional, uid_str);
-    g_ptr_array_add (additional, "icon_file");
-    g_ptr_array_add (additional, u->icon_file ? u->icon_file : "(null)");
-    g_ptr_array_add (additional, "is_current_user");
-    g_ptr_array_add (additional, u->is_current_user ? "true" : "false");
-    g_ptr_array_add (additional, "is_logged_in");
-    g_ptr_array_add (additional, u->is_logged_in ? "true" : "false");
-    g_ptr_array_add (additional, "real_name");
-    g_ptr_array_add (additional, u->real_name ? u->real_name : "(null)");
-    g_ptr_array_add (additional, "user_name");
-    g_ptr_array_add (additional, u->user_name ? u->user_name : "(null)");
-    g_ptr_array_add (additional, NULL); /* null termination */
-    report_recoverable_problem(error_name, (GPid)0, FALSE, (gchar**)additional->pdata);
-
-    /* cleanup */
     g_free (uid_str);
-    g_ptr_array_free (additional, TRUE);
   }
 }
 
@@ -842,14 +832,14 @@ create_session_section (IndicatorSessionService * self, int profile)
   if (indicator_session_actions_can_hibernate (p->backend_actions))
     g_menu_append (menu, _("Hibernate"), "indicator.hibernate");
 
-  if (profile != PROFILE_LOCKSCREEN &&
+  if (profile != PROFILE_LOCKSCREEN && 
     indicator_session_actions_can_reboot (p->backend_actions))
     {
       const char * label = ellipsis ? _("Restart…") : _("Restart");
       g_menu_append (menu, label, "indicator.reboot");
     }
 
-  if (profile != PROFILE_LOCKSCREEN &&
+  if (profile != PROFILE_LOCKSCREEN && 
     !g_settings_get_boolean (s, "suppress-shutdown-menuitem"))
     {
       const char * label = ellipsis ? _("Shut Down…") : _("Shut Down");
@@ -948,14 +938,6 @@ on_help_activated (GSimpleAction  * a      G_GNUC_UNUSED,
 }
 
 static void
-on_bug_activated (GSimpleAction  * a      G_GNUC_UNUSED,
-                   GVariant       * param  G_GNUC_UNUSED,
-                   gpointer         gself)
-{
-  indicator_session_actions_bug (get_backend_actions(gself));
-}
-
-static void
 on_settings_activated (GSimpleAction * a      G_GNUC_UNUSED,
                        GVariant      * param  G_GNUC_UNUSED,
                        gpointer        gself)
@@ -1047,7 +1029,6 @@ init_gactions (IndicatorSessionService * self)
   GActionEntry entries[] = {
     { "about",                  on_about_activated           },
     { "help",                   on_help_activated            },
-    { "bug",                    on_bug_activated             },
     { "hibernate",              on_hibernate_activated       },
     { "logout",                 on_logout_activated          },
     { "online-accounts",        on_online_accounts_activated },
@@ -1425,13 +1406,13 @@ my_get_property (GObject     * o,
                   GParamSpec  * pspec)
 {
   IndicatorSessionService * self = INDICATOR_SESSION_SERVICE (o);
-
+ 
   switch (property_id)
     {
       case PROP_MAX_USERS:
         g_value_set_uint (value, self->priv->max_users);
         break;
-
+ 
       default:
         G_OBJECT_WARN_INVALID_PROPERTY_ID (o, property_id, pspec);
     }

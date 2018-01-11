@@ -3,13 +3,17 @@ Section: gnome
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: cmake,
+               cmake-extras (>= 1.3),
                dbus,
                debhelper (>= 9),
                dh-translations,
+               gcovr,
+               googletest | google-mock,
                intltool,
+               lcov,
                libglib2.0-dev (>= 2.36),
-               libgtest-dev,
                liburl-dispatcher1-dev,
+               libwhoopsie-dev (>= 0.2.52),
                python,
                systemd,
 Standards-Version: 3.9.3

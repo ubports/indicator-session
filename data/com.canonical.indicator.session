@@ -6,10 +6,19 @@ Position=10
 [desktop]
 ObjectPath=/com/canonical/indicator/session/desktop
 
+[phone]
+ObjectPath=/com/canonical/indicator/session/desktop
+
 [desktop_greeter]
 ObjectPath=/com/canonical/indicator/session/desktop_greeter
 
+[phone_greeter]
+ObjectPath=/com/canonical/indicator/session/desktop_greeter
+
 [desktop_lockscreen]
+ObjectPath=/com/canonical/indicator/session/desktop_lockscreen
+
+[phone_lockscreen]
 ObjectPath=/com/canonical/indicator/session/desktop_lockscreen
 
 [ubiquity]

@@ -76,7 +76,6 @@ struct _IndicatorSessionActionsClass
   void  (*reboot)                      (IndicatorSessionActions * self);
   void  (*power_off)                   (IndicatorSessionActions * self);
   void  (*help)                        (IndicatorSessionActions * self);
-  void  (*bug)                         (IndicatorSessionActions * self);
   void  (*about)                       (IndicatorSessionActions * self);
   void  (*settings)                    (IndicatorSessionActions * self);
   void  (*online_accounts)             (IndicatorSessionActions * self);
@@ -121,7 +120,6 @@ void indicator_session_actions_reboot                          (IndicatorSession
 void indicator_session_actions_power_off                       (IndicatorSessionActions * self);
 
 void indicator_session_actions_help                            (IndicatorSessionActions * self);
-void indicator_session_actions_bug                             (IndicatorSessionActions * self);
 void indicator_session_actions_about                           (IndicatorSessionActions * self);
 void indicator_session_actions_settings                        (IndicatorSessionActions * self);
 void indicator_session_actions_online_accounts                 (IndicatorSessionActions * self);

@@ -228,7 +228,7 @@ on_can_suspend_ready (GObject * o, GAsyncResult * res, gpointer gself)
     {
       priv_t * p = INDICATOR_SESSION_ACTIONS_DBUS(gself)->priv;
 
-      const gboolean b = !g_strcmp0 (str, "yes");
+      const gboolean b = !g_strcmp0 (str, "yes") || !g_strcmp0 (str, "challenge");
 
       if (p->can_suspend != b)
         {
@@ -255,7 +255,7 @@ on_can_hibernate_ready (GObject * o, GAsyncResult * res, gpointer gself)
     {
       priv_t * p = INDICATOR_SESSION_ACTIONS_DBUS(gself)->priv;
 
-      const gboolean b = !g_strcmp0 (str, "yes");
+      const gboolean b = !g_strcmp0 (str, "yes") || !g_strcmp0 (str, "challenge");
 
       if (p->can_hibernate != b)
         {
@@ -454,7 +454,7 @@ my_suspend (IndicatorSessionActions * self)
   g_return_if_fail (p->login1_manager != NULL);
 
   login1_manager_call_suspend (p->login1_manager,
-                               FALSE,
+                               TRUE,
                                p->login1_manager_cancellable,
                                NULL,
                                NULL);
@@ -468,7 +468,7 @@ my_hibernate (IndicatorSessionActions * self)
   g_return_if_fail (p->login1_manager != NULL);
 
   login1_manager_call_hibernate (p->login1_manager,
-                                 FALSE,
+                                 TRUE,
                                  p->login1_manager_cancellable,
                                  NULL,
                                  NULL);
@@ -832,18 +832,9 @@ static void
 my_help (IndicatorSessionActions * self G_GNUC_UNUSED)
 {
   if (g_getenv ("MIR_SOCKET") != NULL)
-    url_dispatch_send("https://forums.ubports.com/", NULL, NULL);
+    url_dispatch_send("http://www.askubuntu.com", NULL, NULL);
   else
     run_outside_app ("yelp");
-}
-
-static void
-my_bug (IndicatorSessionActions * self G_GNUC_UNUSED)
-{
-  if (g_getenv ("MIR_SOCKET") != NULL)
-    url_dispatch_send("https://github.com/ubports/ubports-touch/issues", NULL, NULL);
-  else
-    run_outside_app ("firefox https://github.com/ubports/ubports-touch/issues");
 }
 
 static gboolean
@@ -1075,7 +1066,6 @@ indicator_session_actions_dbus_class_init (IndicatorSessionActionsDbusClass * kl
   actions_class->settings = my_settings;
   actions_class->online_accounts = my_online_accounts;
   actions_class->help = my_help;
-  actions_class->bug = my_bug;
   actions_class->about = my_about;
   actions_class->switch_to_screensaver = my_switch_to_screensaver;
   actions_class->switch_to_greeter = my_switch_to_greeter;
