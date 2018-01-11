@@ -1,3 +1,9 @@
+indicator-session (17.3.21+ubports) xenial; urgency=medium
+
+  * Import to upborts
+
+ -- Dan Chapman <dan@ubports.com>  Thu, 11 Jan 2018 17:23:37 +0000
+
 indicator-session (17.3.20+17.04.20170403-0ubuntu1) zesty; urgency=medium
 
   [ Pete ]
