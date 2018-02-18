@@ -3,7 +3,7 @@
 export DPKG_GENSYMBOLS_CHECK_LEVEL=4
 
 %:
-	dh $@ --with translations
+	dh $@ --with systemd,translations
 
 override_dh_install:
 	find debian/indicator-session/usr/lib -name *.la -delete
