@@ -20,8 +20,6 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 
-#include <libwhoopsie/recoverable-problem.h>
-
 #include "backend.h"
 #include "service.h"
 
@@ -110,7 +108,6 @@ struct _IndicatorSessionServicePrivate
   GSimpleAction * guest_switcher_action;
   GSimpleAction * usage_mode_action;
   GHashTable * users;
-  GHashTable * reported_users;
   guint rebuild_id;
   int rebuild_flags;
   GDBusConnection * conn;
@@ -627,39 +624,6 @@ serialize_icon_file (const gchar * filename)
   return serialized_icon;
 }
 
-static void
-report_unusable_user (IndicatorSessionService * self, const IndicatorSessionUser * u)
-{
-  const priv_t * const p = self->priv;
-  gpointer key;
-
-  g_return_if_fail(u != NULL);
-
-  key = GUINT_TO_POINTER(u->uid);
-
-  if (!g_hash_table_contains (p->reported_users, key))
-  {
-    gchar * uid_str = g_strdup_printf("%u", u->uid);
-
-    const char * properties[] = {
-        "uid", uid_str,
-        "icon_file", (u->icon_file ? u->icon_file : "(null)"),
-        "is_current_user", (u->is_current_user ? "true" : "false"),
-        "is_logged_in", (u->is_logged_in ? "true" : "false"),
-        "real_name", (u->real_name ? u->real_name : "(null)"),
-        "user_name", (u->user_name ? u->user_name : "(null)"),
-        NULL
-    };
-
-    whoopsie_report_recoverable_problem("indicator-session-unknown-user-error", 0, FALSE, properties);
-
-    /* mark it as reported so that we'll only report it once */
-    g_hash_table_add (p->reported_users, key);
-
-    g_free (uid_str);
-  }
-}
-
 static GMenuModel *
 create_switch_section (IndicatorSessionService * self, int profile)
 {
@@ -775,7 +739,7 @@ create_switch_section (IndicatorSessionService * self, int profile)
       label = get_user_label (u);
       if (!label || !*label)
       {
-        report_unusable_user (self, u);
+        g_warning("Unable to add user to listing: %u", u->uid);
         continue;
       }
 
@@ -1328,8 +1292,6 @@ indicator_session_service_init (IndicatorSessionService * self)
                                     NULL,
                                     (GDestroyNotify)indicator_session_user_free);
 
-  p->reported_users = g_hash_table_new (g_direct_hash, g_direct_equal);
-
   maybe_add_users (self);
 
   init_gactions (self);
@@ -1470,7 +1432,6 @@ my_dispose (GObject * o)
     }
 
   g_clear_pointer (&p->users, g_hash_table_destroy);
-  g_clear_pointer (&p->reported_users, g_hash_table_destroy);
   g_clear_object (&p->backend_users);
   g_clear_object (&p->backend_guest);
   g_clear_object (&p->backend_actions);
