@@ -14,7 +14,6 @@ Build-Depends: cmake,
                lcov,
                libglib2.0-dev (>= 2.36),
                liburl-dispatcher1-dev,
-               libwhoopsie-dev (>= 0.2.52),
                python,
                systemd,
 Standards-Version: 3.9.3
