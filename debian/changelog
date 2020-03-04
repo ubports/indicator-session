@@ -1,3 +1,11 @@
+indicator-session (20.3.0+ubports) xenial; urgency=medium
+
+  * Added link to UBports bug tracker
+  * Added link to UBports forums
+  * Build: Fix generation of translation sources
+
+ -- Dalton Durst <dalton@ubports.com>  Tue, 03 Mar 2020 18:41:11 -0600
+
 indicator-session (12.10.6+ubports) vivid; urgency=medium
 
   * Imported to UBports
@@ -1515,4 +1523,3 @@ indicator-session (0.1~bzr17-0ubuntu1) karmic; urgency=low
   * debian/watch: Switching to indicator-session*
 
  -- Ken VanDine <ken.vandine@canonical.com>  Fri, 21 Aug 2009 12:28:13 -0400
-
