@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-29 11:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/backend-dbus/actions.c:742
+msgid "Are you sure you want to close all programs and log out?"
+msgstr ""
+
+#: ../src/backend-dbus/actions.c:743
+msgid ""
+"Some software updates won't be applied until the computer next restarts."
+msgstr ""
+
+#: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
+#: ../src/service.c:822
+msgid "Log Out"
+msgstr ""
+
+#: ../src/backend-dbus/actions.c:751 ../src/backend-dbus/actions.c:783
+#: ../src/backend-dbus/actions.c:808
+msgid "Cancel"
+msgstr ""
+
+#: ../src/backend-dbus/actions.c:780 ../src/backend-dbus/actions.c:782
+#: ../src/service.c:848
+msgid "Restart"
+msgstr ""
+
+#: ../src/backend-dbus/actions.c:781
+msgid "Are you sure you want to close all programs and restart the computer?"
+msgstr ""
+
+#: ../src/backend-dbus/actions.c:805 ../src/backend-dbus/actions.c:807
+#: ../src/service.c:855
+msgid "Shut Down"
+msgstr ""
+
+#: ../src/backend-dbus/actions.c:806
+msgid "Are you sure you want to close all programs and shut down the computer?"
+msgstr ""
+
+#. Translators: the name of the menu ("System"), then the user's name
+#: ../src/service.c:194
+#, c-format
+msgid "System, %s"
+msgstr ""
+
+#: ../src/service.c:198
+msgid "System"
+msgstr ""
+
+#: ../src/service.c:332
+msgid "Guest"
+msgstr ""
+
+#: ../src/service.c:457
+#, c-format
+msgid "%s Help…"
+msgstr ""
+
+#: ../src/service.c:460
+msgid "About This Device…"
+msgstr ""
+
+#: ../src/service.c:462
+msgid "About This Computer"
+msgstr ""
+
+#: ../src/service.c:466
+msgid "Report a bug"
+msgstr ""
+
+#: ../src/service.c:471
+msgid "Desktop mode"
+msgstr ""
+
+#: ../src/service.c:487
+msgid "System Settings…"
+msgstr ""
+
+#: ../src/service.c:489
+msgid "Online Accounts…"
+msgstr ""
+
+#: ../src/service.c:692
+msgid "Start Screen Saver"
+msgstr ""
+
+#: ../src/service.c:700 ../src/service.c:716
+msgid "Switch Account…"
+msgstr ""
+
+#: ../src/service.c:701 ../src/service.c:717
+msgid "Switch Account"
+msgstr ""
+
+#: ../src/service.c:713
+msgid "Lock/Switch Account…"
+msgstr ""
+
+#: ../src/service.c:714
+msgid "Lock/Switch Account"
+msgstr ""
+
+#: ../src/service.c:720
+msgid "Lock"
+msgstr ""
+
+#: ../src/service.c:745
+msgid "Guest Session"
+msgstr ""
+
+#: ../src/service.c:822
+msgid "Log Out…"
+msgstr ""
+
+#: ../src/service.c:840
+msgid "Suspend"
+msgstr ""
+
+#: ../src/service.c:843
+msgid "Hibernate"
+msgstr ""
+
+#: ../src/service.c:848
+msgid "Restart…"
+msgstr ""
+
+#: ../src/service.c:855
+msgid "Shut Down…"
+msgstr ""
