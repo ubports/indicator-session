@@ -5,7 +5,7 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 ##
 ##  GNU standard installation directories
-## 
+##
 include (GNUInstallDirs)
 
 set (PROJECT_VERSION "16.10.0")
@@ -15,7 +15,7 @@ add_definitions (
     -DGETTEXT_PACKAGE="${GETTEXT_PACKAGE}"
     -DGNOMELOCALEDIR="${CMAKE_INSTALL_FULL_LOCALEDIR}"
 )
-                 
+
 option (enable_tests "Build the package's automatic tests." ON)
 option (enable_lcov "Generate lcov code coverage reports." ON)
 
