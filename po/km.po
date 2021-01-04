@@ -6,282 +6,205 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: indicator-session\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-09-15 08:37+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-29 11:01+0200\n"
 "PO-Revision-Date: 2010-10-11 15:15+0000\n"
 "Last-Translator: ពៅ សុភា <Unknown>\n"
 "Language-Team: Khmer <km@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
 "X-Generator: Launchpad (build 14041)\n"
 
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:1
-msgid "Makes it so that the logout button doesn’t show in the session menu."
-msgstr ""
-
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:2
-msgid "Makes it so that the restart button doesn’t show in the session menu."
-msgstr ""
-
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:3
-msgid ""
-"Makes it so that the shutdown button doesn’t show in the session menu."
-msgstr ""
-
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:4
-msgid "Remove the Log Out item from the session menu"
-msgstr "លុបប៊ូតុង\"ចេញពីប្រព័ន្ធ\"ពីបញ្ជីវគ្គ"
-
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:5
-msgid "Remove the Restart item from the session menu"
-msgstr "លុបប៊ូតុង\"បើកម៉ាស៊ីនឡើងវិញ\"ពីបញ្ជីវគ្គ"
-
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:6
-msgid "Remove the shutdown item from the session menu"
-msgstr "លុបប៊ូតុង\"បិទម៉ាស៊ីន\"ពីបញ្ជីវគ្គ"
-
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:7
-msgid "Suppress the dialog to confirm logout, restart and shutdown action"
-msgstr ""
-"កុំបង្ហាញសំណួរបញ្ជាក់នៅពេល ចេញពីប្រព័ន្ធ, បើកម៉ាស៊ីនឡើងវិញ និង បិទម៉ាស៊ីន"
-
-#: ../data/com.canonical.indicator.session.gschema.xml.in.h:8
-msgid ""
-"Whether or not to show confirmation dialogs for logout, restart and shutdown "
-"actions."
-msgstr ""
-"បង្ហាញសំណួរបញ្ជាក់នៅពេល ចេញពីប្រព័ន្ធ, បើកម៉ាស៊ីនឡើងវិញ និង បិទម៉ាស៊ីន "
-"ឬក៏អត់ ។"
-
-#: ../data/extra-sessions/classic-desktop.desktop.in.in.h:1
-msgid "Classic Guest Session"
-msgstr ""
-
-#: ../data/extra-sessions/classic-desktop.desktop.in.in.h:2
-msgid "Start a guest session using the classic desktop"
-msgstr ""
-
-#: ../data/indicator-session-lock-screen.desktop.in.in.h:1
-#: ../src/device-menu-mgr.c:649
-msgid "Lock Screen"
-msgstr "ចាក់សោ"
-
-#: ../data/indicator-session-shutdown.desktop.in.in.h:1
-#: ../src/settings-helper.c:86 ../src/device-menu-mgr.c:716
-msgid "Shut Down"
-msgstr "បិទម៉ាស៊ីន"
-
-#: ../data/indicator-session-logout.desktop.in.in.h:1
-#: ../src/settings-helper.c:84 ../src/device-menu-mgr.c:672
-msgid "Log Out"
-msgstr "ចេញពីប្រព័ន្ធ"
-
-#: ../data/indicator-session-restart.desktop.in.in.h:1
-#: ../src/settings-helper.c:85
-msgid "Restart"
-msgstr "បើកម៉ាស៊ីនឡើងវិញ"
-
-#: ../src/settings-helper.c:88 ../src/device-menu-mgr.c:677
-msgid "Log Out…"
-msgstr "ចេញពីប្រព័ន្ធ..."
-
-#: ../src/settings-helper.c:89
-msgid "Restart…"
-msgstr "បើកម៉ាស៊ីនឡើងវិញ..."
-
-#: ../src/settings-helper.c:90 ../src/device-menu-mgr.c:721
-msgid "Shut Down…"
-msgstr "បិទម៉ាស៊ីន..."
-
-#. LOGOUT_DIALOG_LOGOUT,
-#: ../src/dialog.c:35
-msgctxt "title"
-msgid "Log Out"
-msgstr "ចេញពីប្រព័ន្ធ"
-
-#. LOGOUT_DIALOG_RESTART,
-#: ../src/dialog.c:36
-msgctxt "title"
-msgid "Restart"
-msgstr "បើកម៉ាស៊ីនឡើងវិញ"
-
-#. LOGOUT_DIALOG_SHUTDOWN,
-#: ../src/dialog.c:37
-msgctxt "title"
-msgid "Shut Down"
-msgstr "បិទម៉ាស៊ីន"
-
-#. LOGOUT_DIALOG_LOGOUT,
-#: ../src/dialog.c:41
-msgid ""
-"Are you sure you want to close all programs and log out of the computer?"
+#: ../src/backend-dbus/actions.c:742
+#, fuzzy
+#| msgid ""
+#| "Are you sure you want to close all programs and log out of the computer?"
+msgid "Are you sure you want to close all programs and log out?"
 msgstr "តើអ្នកពិតជាចង់បិទកម្មវិធីទាំងអស់ រួចចេញពីប្រព័ន្ធមែនទេ ?"
 
-#. LOGOUT_DIALOG_RESTART,
-#: ../src/dialog.c:42
-msgid "Are you sure you want to close all programs and restart the computer?"
-msgstr "តើអ្នកពិតជាចង់បិទកម្មវិធីទាំងអស់ រួចបើកម៉ាស៊ីនឡើងវិញមែនទេ ?"
-
-#. LOGOUT_DIALOG_SHUTDOWN,
-#: ../src/dialog.c:43
+#: ../src/backend-dbus/actions.c:743
+#, fuzzy
+#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
-"Are you sure you want to close all programs and shut down the computer?"
-msgstr "តើអ្នកពិតជាចង់បិទកម្មវិធីទាំងអស់ រួចបិទម៉ាស៊ីនមែនទេ ?"
+"Some software updates won't be applied until the computer next restarts."
+msgstr "បន្ទាន់សម័យចំពោះកម្មវិធីខ្លះមិនទាន់ប្រើបាននៅឡើយទេ លុះត្រាតែអ្នកបើកម៉ាស៊ីនឡើងវិញ ។"
 
-#. LOGOUT_DIALOG_LOGOUT,
-#: ../src/dialog.c:47
-msgctxt "button"
+#: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
+#: ../src/service.c:822
 msgid "Log Out"
 msgstr "ចេញពីប្រព័ន្ធ"
 
-#. LOGOUT_DIALOG_RESTART,
-#: ../src/dialog.c:48
-msgctxt "button"
-msgid "Restart"
-msgstr "បើកម៉ាស៊ីនឡើងវិញ"
-
-#. LOGOUT_DIALOG_SHUTDOWN,
-#: ../src/dialog.c:49
-msgctxt "button"
-msgid "Shut Down"
-msgstr "បិទម៉ាស៊ីន"
-
-#. LOGOUT_DIALOG_LOGOUT,
-#: ../src/dialog.c:55
-msgctxt "button auth"
-msgid "Log Out"
-msgstr "ចេញពីប្រព័ន្ធ"
-
-#. LOGOUT_DIALOG_RESTART,
-#: ../src/dialog.c:56
-msgctxt "button auth"
-msgid "Restart…"
-msgstr ""
-
-#. LOGOUT_DIALOG_SHUTDOWN,
-#: ../src/dialog.c:57
-msgctxt "button auth"
-msgid "Shut Down…"
-msgstr ""
-
-#. TRANSLATORS: This button appears on the logout dialog when
-#. there are updates that require restart.  It will do a restart
-#. in place of a log out.
-#: ../src/dialog.c:63
-msgid "Restart Instead"
-msgstr "សូមបើកម៉ាស៊ីនឡើងវិញ"
-
-#: ../src/dialog.c:64
-msgid "Restart Instead…"
-msgstr ""
-
-#: ../src/dialog.c:65
-msgid "Some software updates won’t apply until the computer next restarts."
-msgstr ""
-
-#: ../src/dialog.c:219 ../src/dialog.c:224
+#: ../src/backend-dbus/actions.c:751 ../src/backend-dbus/actions.c:783
+#: ../src/backend-dbus/actions.c:808
 msgid "Cancel"
 msgstr "បោះ​បង់"
 
-#: ../src/indicator-session.c:538
-msgctxt "session_menu:switchfrom"
-msgid "1"
-msgstr "ប្ដូរអ្នកប្រើពី %s..."
+#: ../src/backend-dbus/actions.c:780 ../src/backend-dbus/actions.c:782
+#: ../src/service.c:848
+msgid "Restart"
+msgstr "បើកម៉ាស៊ីនឡើងវិញ"
 
-#: ../src/indicator-session.c:551
-msgid "Switch User Account…"
-msgstr ""
+#: ../src/backend-dbus/actions.c:781
+msgid "Are you sure you want to close all programs and restart the computer?"
+msgstr "តើអ្នកពិតជាចង់បិទកម្មវិធីទាំងអស់ រួចបើកម៉ាស៊ីនឡើងវិញមែនទេ ?"
 
-#: ../src/indicator-session.c:578
+#: ../src/backend-dbus/actions.c:805 ../src/backend-dbus/actions.c:807
+#: ../src/service.c:855
+msgid "Shut Down"
+msgstr "បិទម៉ាស៊ីន"
+
+#: ../src/backend-dbus/actions.c:806
+msgid "Are you sure you want to close all programs and shut down the computer?"
+msgstr "តើអ្នកពិតជាចង់បិទកម្មវិធីទាំងអស់ រួចបិទម៉ាស៊ីនមែនទេ ?"
+
+#. Translators: the name of the menu ("System"), then the user's name
+#: ../src/service.c:194
 #, c-format
-msgid "Switch From %s…"
+msgid "System, %s"
 msgstr ""
 
-#: ../src/apt-watcher.c:280 ../src/apt-watcher.c:340 ../src/apt-watcher.c:392
-#: ../src/device-menu-mgr.c:548
-msgid "Software Up to Date"
+#: ../src/service.c:198
+msgid "System"
 msgstr ""
 
-#: ../src/apt-watcher.c:286 ../src/apt-watcher.c:352
-msgid "Updates Available…"
-msgstr ""
-
-#: ../src/apt-watcher.c:292 ../src/apt-watcher.c:357
-msgid "Updates Installing…"
-msgstr ""
-
-#: ../src/apt-watcher.c:401 ../src/apt-watcher.c:464
-msgid "Restart to Complete Updates…"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:516
-msgid "System Settings…"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:527
-msgid "Displays…"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:537
-msgid "Startup Applications…"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:566
-msgid "Attached Devices"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:577
-msgid "Printers"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:588
-msgid "Scanners"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:603 ../src/udev-mgr.c:243 ../src/udev-mgr.c:255
-msgid "Webcam"
-msgstr ""
-
-#: ../src/device-menu-mgr.c:692
-msgid "Suspend"
-msgstr "ដេក"
-
-#: ../src/device-menu-mgr.c:704
-msgid "Hibernate"
-msgstr "ដេកយូរ"
-
-#: ../src/user-menu-mgr.c:175
-msgid "Guest Session"
-msgstr "វគ្គភ្ញៀវ"
-
-#: ../src/user-menu-mgr.c:189
+#: ../src/service.c:332
 msgid "Guest"
 msgstr ""
 
-#: ../src/user-menu-mgr.c:270
+#: ../src/service.c:457
+#, c-format
+msgid "%s Help…"
+msgstr ""
+
+#: ../src/service.c:460
+msgid "About This Device…"
+msgstr ""
+
+#: ../src/service.c:462
+msgid "About This Computer"
+msgstr ""
+
+#: ../src/service.c:466
+msgid "Report a bug"
+msgstr ""
+
+#: ../src/service.c:471
+msgid "Desktop mode"
+msgstr ""
+
+#: ../src/service.c:487
+msgid "System Settings…"
+msgstr ""
+
+#: ../src/service.c:489
 msgid "Online Accounts…"
 msgstr ""
 
-#: ../src/user-menu-mgr.c:285
-msgid "User Accounts…"
+#: ../src/service.c:692
+msgid "Start Screen Saver"
 msgstr ""
 
-#: ../src/udev-mgr.c:255
-#, c-format
-msgid "%s Webcam"
+#: ../src/service.c:700 ../src/service.c:716
+msgid "Switch Account…"
 msgstr ""
 
-#: ../src/udev-mgr.c:335 ../src/udev-mgr.c:387 ../src/udev-mgr.c:400
-#: ../src/udev-mgr.c:454 ../src/udev-mgr.c:466
-msgid "Scanner"
+#: ../src/service.c:701 ../src/service.c:717
+msgid "Switch Account"
 msgstr ""
 
-#: ../src/udev-mgr.c:335 ../src/udev-mgr.c:400 ../src/udev-mgr.c:466
-#, c-format
-msgid "%s Scanner"
+#: ../src/service.c:713
+msgid "Lock/Switch Account…"
 msgstr ""
+
+#: ../src/service.c:714
+msgid "Lock/Switch Account"
+msgstr ""
+
+#: ../src/service.c:720
+msgid "Lock"
+msgstr ""
+
+#: ../src/service.c:745
+msgid "Guest Session"
+msgstr "វគ្គភ្ញៀវ"
+
+#: ../src/service.c:822
+msgid "Log Out…"
+msgstr "ចេញពីប្រព័ន្ធ..."
+
+#: ../src/service.c:840
+msgid "Suspend"
+msgstr "ដេក"
+
+#: ../src/service.c:843
+msgid "Hibernate"
+msgstr "ដេកយូរ"
+
+#: ../src/service.c:848
+msgid "Restart…"
+msgstr "បើកម៉ាស៊ីនឡើងវិញ..."
+
+#: ../src/service.c:855
+msgid "Shut Down…"
+msgstr "បិទម៉ាស៊ីន..."
+
+#~ msgid "Remove the Log Out item from the session menu"
+#~ msgstr "លុបប៊ូតុង\"ចេញពីប្រព័ន្ធ\"ពីបញ្ជីវគ្គ"
+
+#~ msgid "Remove the Restart item from the session menu"
+#~ msgstr "លុបប៊ូតុង\"បើកម៉ាស៊ីនឡើងវិញ\"ពីបញ្ជីវគ្គ"
+
+#~ msgid "Remove the shutdown item from the session menu"
+#~ msgstr "លុបប៊ូតុង\"បិទម៉ាស៊ីន\"ពីបញ្ជីវគ្គ"
+
+#~ msgid "Suppress the dialog to confirm logout, restart and shutdown action"
+#~ msgstr "កុំបង្ហាញសំណួរបញ្ជាក់នៅពេល ចេញពីប្រព័ន្ធ, បើកម៉ាស៊ីនឡើងវិញ និង បិទម៉ាស៊ីន"
+
+#~ msgid ""
+#~ "Whether or not to show confirmation dialogs for logout, restart and "
+#~ "shutdown actions."
+#~ msgstr "បង្ហាញសំណួរបញ្ជាក់នៅពេល ចេញពីប្រព័ន្ធ, បើកម៉ាស៊ីនឡើងវិញ និង បិទម៉ាស៊ីន ឬក៏អត់ ។"
+
+#~ msgid "Lock Screen"
+#~ msgstr "ចាក់សោ"
+
+#~ msgctxt "title"
+#~ msgid "Log Out"
+#~ msgstr "ចេញពីប្រព័ន្ធ"
+
+#~ msgctxt "title"
+#~ msgid "Restart"
+#~ msgstr "បើកម៉ាស៊ីនឡើងវិញ"
+
+#~ msgctxt "title"
+#~ msgid "Shut Down"
+#~ msgstr "បិទម៉ាស៊ីន"
+
+#~ msgctxt "button"
+#~ msgid "Log Out"
+#~ msgstr "ចេញពីប្រព័ន្ធ"
+
+#~ msgctxt "button"
+#~ msgid "Restart"
+#~ msgstr "បើកម៉ាស៊ីនឡើងវិញ"
+
+#~ msgctxt "button"
+#~ msgid "Shut Down"
+#~ msgstr "បិទម៉ាស៊ីន"
+
+#~ msgctxt "button auth"
+#~ msgid "Log Out"
+#~ msgstr "ចេញពីប្រព័ន្ធ"
+
+#~ msgid "Restart Instead"
+#~ msgstr "សូមបើកម៉ាស៊ីនឡើងវិញ"
+
+#~ msgctxt "session_menu:switchfrom"
+#~ msgid "1"
+#~ msgstr "ប្ដូរអ្នកប្រើពី %s..."
 
 #~ msgid "Makes it so that the logout button doesn't show in the session menu."
 #~ msgstr "កុំបង្ហាញប៊ូតុង\"ចេញពីប្រព័ន្ធ\"ក្នុងបញ្ជីវគ្គ"
@@ -290,7 +213,8 @@ msgstr ""
 #~ "Makes it so that the shutdown button doesn't show in the session menu."
 #~ msgstr "កុំបង្ហាញប៊ូតុង\"បិទម៉ាស៊ីន\"ក្នុងបញ្ជីវគ្គ"
 
-#~ msgid "Makes it so that the restart button doesn't show in the session menu."
+#~ msgid ""
+#~ "Makes it so that the restart button doesn't show in the session menu."
 #~ msgstr "កុំបង្ហាញប៊ូតុង\"បើកម៉ាស៊ីនឡើងវិញ\"ក្នុងបញ្ជីវគ្គ"
 
 #~ msgid "Shut Down..."
@@ -309,11 +233,6 @@ msgstr ""
 #~ msgid "Shut Down..."
 #~ msgstr "បិទម៉ាស៊ីន..."
 
-#~ msgid "Some software updates won't apply until the computer next restarts."
-#~ msgstr ""
-#~ "បន្ទាន់សម័យចំពោះកម្មវិធីខ្លះមិនទាន់ប្រើបាននៅឡើយទេ "
-#~ "លុះត្រាតែអ្នកបើកម៉ាស៊ីនឡើងវិញ ។"
-
 #~ msgctxt "button auth"
 #~ msgid "Restart..."
 #~ msgstr "បើកម៉ាស៊ីនឡើងវិញ..."
@@ -321,7 +240,6 @@ msgstr ""
 #~ msgid "Switch User..."
 #~ msgstr "ប្ដូរអ្នកប្រើ..."
 
-#, c-format
 #~ msgid "Switch From %s..."
 #~ msgstr "ប្ដូរអ្នកប្រើពី %s..."
 
