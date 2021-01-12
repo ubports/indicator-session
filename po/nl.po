@@ -8,32 +8,26 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-17 19:40+0000\n"
-"Last-Translator: rob <linuxned@gmail.com>\n"
-"Language-Team: Dutch\n"
-"Language: \n"
+"PO-Revision-Date: 2021-01-06 01:37+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
+"indicator-session/nl/>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr ""
-"Weet u zeker dat u alle programma's wilt afsluiten en uzelf van de computer "
-"wilt afmelden?"
+msgstr "Weet je zeker dat je alle programma's wilt afsluiten en wilt afmelden?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
-msgstr ""
-"Sommige updates worden niet doorgevoerd totdat de computer wordt herstart."
+msgstr "Sommige updates worden pas doorgevoerd als de computer wordt herstart."
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822
@@ -71,11 +65,11 @@ msgstr ""
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "Systeem, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "Systeem"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -84,23 +78,23 @@ msgstr "Gast"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s-hulp…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "Over dit apparaat…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "Over deze computer"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "Bug melden"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "Computermodus"
 
 #: ../src/service.c:487
 msgid "System Settings…"
@@ -112,35 +106,27 @@ msgstr "Online accounts…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Schermbeveiliging starten"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "Gebruiker wisselen…"
+msgstr "Andere gebruiker…"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "Gebruiker wisselen…"
+msgstr "Andere gebruiker"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "Gebruiker wisselen…"
+msgstr "Vergrendelen/Andere gebruiker…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "Gebruiker wisselen…"
+msgstr "Vergrendelen/Andere gebruiker"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "Vergrendelen"
 
 #: ../src/service.c:745
 msgid "Guest Session"

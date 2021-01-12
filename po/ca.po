@@ -8,28 +8,23 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-21 20:23+0000\n"
-"Last-Translator: Joan Duran <jodufi@gmail.com>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2021-01-06 01:37+0000\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
+"indicator-session/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr ""
-"Esteu segur que voleu tancar tots els programes i finalitzar la sessió en "
-"aquest ordinador?"
+msgstr "Esteu segur que voleu tancar tots els programes i finalitzar la sessió?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr ""
@@ -69,11 +64,11 @@ msgstr "Esteu segur que voleu tancar tots els programes i aturar l'ordinador?"
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "Sistema, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -82,23 +77,23 @@ msgstr "Convidat"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s Ajuda…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "Quant a aquest dispositiu…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "Quant a aquest ordinador"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "Informeu d'un error"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "Mode d'escriptori"
 
 #: ../src/service.c:487
 msgid "System Settings…"
@@ -110,31 +105,27 @@ msgstr "Comptes en línia…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Inicia el salvapantalles"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Online Accounts…"
 msgid "Switch Account…"
-msgstr "Comptes en línia…"
+msgstr "Canvia de compte…"
 
 #: ../src/service.c:701 ../src/service.c:717
 msgid "Switch Account"
-msgstr ""
+msgstr "Canvia de compte"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Online Accounts…"
 msgid "Lock/Switch Account…"
-msgstr "Comptes en línia…"
+msgstr "Bloqueja o canvia de compte…"
 
 #: ../src/service.c:714
 msgid "Lock/Switch Account"
-msgstr ""
+msgstr "Bloqueja o canvia de compte"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "Bloqueja"
 
 #: ../src/service.c:745
 msgid "Guest Session"
@@ -154,7 +145,7 @@ msgstr "Hiberna"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "Reinicia..."
+msgstr "Reinicia…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"

@@ -8,32 +8,29 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-26 14:52+0000\n"
-"Last-Translator: Dawid Dubanosow <Unknown>\n"
-"Language-Team: Polish\n"
-"Language: \n"
+"PO-Revision-Date: 2021-01-05 01:43+0000\n"
+"Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
+"Language-Team: Polish <https://translate.ubports.com/projects/ubports/"
+"indicator-session/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr ""
-"Zakończyć działanie wszystkich programów i wylogować bieżącego użytkownika?"
+msgstr "Zakończyć działanie wszystkich programów i wylogować się?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr ""
-"Część oprogramowania zostanie zaktualizowana po ponownym uruchomieniu "
-"komputera."
+"Część oprogramowania zostanie zaktualizowana dopiero po ponownym "
+"uruchomieniu komputera."
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822
@@ -68,11 +65,11 @@ msgstr "Zakończyć działanie wszystkich programów i wyłączyć komputer?"
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "System, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -81,63 +78,55 @@ msgstr "Gość"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "Pomoc %s…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "O tym urządzeniu…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "o tym komputerze"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "Zgłoś błąd"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "Tryb pulpitu"
 
 #: ../src/service.c:487
 msgid "System Settings…"
-msgstr "Ustawienia systemu..."
+msgstr "Ustawienia systemu…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr "Konta sieciowe..."
+msgstr "Konta online…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Uruchom wygaszacz ekranu"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "Przełącz konto użytkownika..."
+msgstr "Przełącz konto…"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "Przełącz konto użytkownika..."
+msgstr "Przełącz konto"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "Przełącz konto użytkownika..."
+msgstr "Zablokuj/Przełącz konto…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "Przełącz konto użytkownika..."
+msgstr "Zablokuj/Przełącz konto"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "Zablokuj"
 
 #: ../src/service.c:745
 msgid "Guest Session"
@@ -145,7 +134,7 @@ msgstr "Sesja gościa"
 
 #: ../src/service.c:822
 msgid "Log Out…"
-msgstr "Wyloguj..."
+msgstr "Wyloguj…"
 
 #: ../src/service.c:840
 msgid "Suspend"
@@ -157,11 +146,11 @@ msgstr "Zahibernuj"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "Uruchom ponownie..."
+msgstr "Uruchom ponownie…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"
-msgstr "Wyłącz..."
+msgstr "Wyłącz…"
 
 #~ msgid "Makes it so that the logout button doesn’t show in the session menu."
 #~ msgstr ""
