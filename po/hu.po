@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-15 16:33+0000\n"
-"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
-"Language-Team: Hungarian\n"
-"Language: \n"
+"PO-Revision-Date: 2021-01-28 03:24+0000\n"
+"Last-Translator: Adam <padamyno@gmail.com>\n"
+"Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
+"indicator-session/hu/>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
@@ -42,7 +44,7 @@ msgstr "Kijelentkezés"
 #: ../src/backend-dbus/actions.c:751 ../src/backend-dbus/actions.c:783
 #: ../src/backend-dbus/actions.c:808
 msgid "Cancel"
-msgstr "Mégse"
+msgstr "Mégsem"
 
 #: ../src/backend-dbus/actions.c:780 ../src/backend-dbus/actions.c:782
 #: ../src/service.c:848
