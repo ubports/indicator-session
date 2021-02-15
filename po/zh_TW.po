@@ -8,29 +8,26 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-16 07:55+0000\n"
-"Last-Translator: Roy Chan <roy.chan@linux.org.hk>\n"
-"Language-Team: Chinese (traditional)\n"
-"Language: \n"
+"PO-Revision-Date: 2021-02-14 20:35+0000\n"
+"Last-Translator: louies0623 <louies0623@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
+"ubports/indicator-session/zh_Hant/>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr "您是否真的想關閉所有程式並從電腦登出？"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
-msgstr "有些軟體在電腦下次重新啟動前未能套用更新。"
+msgstr "有些軟體在電腦下次重新啟動前是不會套用更新的。"
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822
@@ -64,11 +61,11 @@ msgstr "您是否真的想關閉所有程式並關掉電腦？"
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "系統，%s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "系統"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -77,63 +74,55 @@ msgstr "訪客"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s 幫助…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "關於這個設備…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "關於這個電腦"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "報告錯誤"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "桌面模式"
 
 #: ../src/service.c:487
 msgid "System Settings…"
-msgstr "系統設定值..."
+msgstr "系統設定值…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr "線上帳號..."
+msgstr "線上帳戶…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "開啟螢幕保護程式"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "切換使用者帳號..."
+msgstr "切換帳戶…"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "切換使用者帳號..."
+msgstr "切換帳戶"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "切換使用者帳號..."
+msgstr "鎖定/切換帳戶…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "切換使用者帳號..."
+msgstr "鎖定/切換帳戶"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "鎖定"
 
 #: ../src/service.c:745
 msgid "Guest Session"
@@ -141,7 +130,7 @@ msgstr "訪客作業階段"
 
 #: ../src/service.c:822
 msgid "Log Out…"
-msgstr "登出..."
+msgstr "登出…"
 
 #: ../src/service.c:840
 msgid "Suspend"
@@ -153,11 +142,11 @@ msgstr "休眠"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "重新啟動..."
+msgstr "重新啟動…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"
-msgstr "關機..."
+msgstr "關機…"
 
 #~ msgid "Makes it so that the logout button doesn’t show in the session menu."
 #~ msgstr "讓登出按鈕不顯示在工作階段選單內。"
