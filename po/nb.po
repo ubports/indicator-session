@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-01-31 01:30+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2021-03-12 02:36+0000\n"
+"Last-Translator: Jan Christian Sherdahl <jan@sherdahl.no>\n"
 "Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
 "ubports/indicator-session/nb/>\n"
 "Language: nb\n"
@@ -21,18 +21,13 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr "Ønsker du å lukke alle programmer og logge av datamaskinen?"
+msgstr "Ønsker du å lukke alle programmer og logge ut?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
-msgstr "Noen programvareoppdateringer trer ikke i kraft før etter en omstart."
+msgstr "Noen programvareoppdateringer trer ikke i kraft før etter omstart."
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822
@@ -77,9 +72,9 @@ msgid "Guest"
 msgstr "Gjest"
 
 #: ../src/service.c:457
-#, c-format, fuzzy
+#, c-format
 msgid "%s Help…"
-msgstr "%s-hjelp …"
+msgstr "%s Hjelp …"
 
 #: ../src/service.c:460
 msgid "About This Device…"
@@ -103,35 +98,27 @@ msgstr "Systeminnstillinger …"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr "Nettkontoer..."
+msgstr "Online kontoer…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
 msgstr "Start skjermsparer"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "Bytt brukerkonto…"
+msgstr "Bytt konto…"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "Bytt brukerkonto…"
+msgstr "Bytt konto"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "Bytt brukerkonto…"
+msgstr "Lås/bytt konto…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "Bytt brukerkonto…"
+msgstr "Lås/bytt konto"
 
 #: ../src/service.c:720
 msgid "Lock"
@@ -143,7 +130,7 @@ msgstr "Gjesteøkt"
 
 #: ../src/service.c:822
 msgid "Log Out…"
-msgstr "Logg av..."
+msgstr "Logg ut…"
 
 #: ../src/service.c:840
 msgid "Suspend"
@@ -155,11 +142,11 @@ msgstr "Dvalemodus"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "Start på nytt..."
+msgstr "Omstart…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"
-msgstr "Slå av..."
+msgstr "Slå av…"
 
 #~ msgid "Makes it so that the logout button doesn’t show in the session menu."
 #~ msgstr "Skjul avloggingsknappen i øktmenyen."
