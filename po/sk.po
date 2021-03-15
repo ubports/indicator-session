@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-02-05 20:31+0000\n"
+"PO-Revision-Date: 2021-03-08 17:39+0000\n"
 "Last-Translator: dano6 <dano.kutka@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/ubports/"
 "indicator-session/sk/>\n"
@@ -25,12 +25,9 @@ msgid "Are you sure you want to close all programs and log out?"
 msgstr "Naozaj chcete zavrieť všetky programy a odhlásiť sa?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
-msgstr ""
-"Niektoré aktualizácie nebudú aplikované pokiaľ sa počítač nereštartuje."
+msgstr "Niektoré aktualizácie nebudú aplikované pokiaľ sa počítač nereštartuje."
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822

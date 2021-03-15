@@ -8,29 +8,26 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-03-11 19:11+0000\n"
-"Last-Translator: Serj Safarian <serjsafarian@gmail.com>\n"
-"Language-Team: Armenian <hy@li.org>\n"
+"PO-Revision-Date: 2021-03-08 10:42+0000\n"
+"Last-Translator: TigranKhachatryan0 <tigrank2008@gmail.com>\n"
+"Language-Team: Armenian <https://translate.ubports.com/projects/ubports/"
+"indicator-session/hy/>\n"
 "Language: hy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr "Դուք իրո՞ք կամենում եք փակել բոլոր ծրագրերը և ավարտել ընթացիկ նիստը։"
+msgstr "Համոզվա՞ծ եք, որ ուզում եք փակել բոլոր ծրագրերը և դուրս գալ։"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
-msgstr "Որոշ թարմացումները կտեղադրվեն միայն համակարգչի վերագործակից հետո։"
+msgstr "Որոշ թարմացումներ կտեղադրվեն միայն վերաբեռնումից հետո։"
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822
@@ -45,12 +42,11 @@ msgstr "Չեղարկել"
 #: ../src/backend-dbus/actions.c:780 ../src/backend-dbus/actions.c:782
 #: ../src/service.c:848
 msgid "Restart"
-msgstr "Վերագործարկ"
+msgstr "Վերաբեռնել"
 
 #: ../src/backend-dbus/actions.c:781
 msgid "Are you sure you want to close all programs and restart the computer?"
-msgstr ""
-"Դուք իրո՞ք կամենում եք փակել բոլոր ծրագրերը և վերագործարկել համակարգիչը։"
+msgstr "Համոզվա՞ծ եք, որ ուզում եք փակել բոլոր ծրագրերը և վերաբեռնել։"
 
 #: ../src/backend-dbus/actions.c:805 ../src/backend-dbus/actions.c:807
 #: ../src/service.c:855
@@ -59,7 +55,7 @@ msgstr "Անջատել"
 
 #: ../src/backend-dbus/actions.c:806
 msgid "Are you sure you want to close all programs and shut down the computer?"
-msgstr "Դուք իրո՞ք կամենում եք փակել բոլոր ծրագրերը և անջատել համակարգիչը։"
+msgstr "Համոզվա՞ծ եք, որ ուզում եք փակել բոլոր ծրագրերը և վերաբեռնել։"
 
 #. Translators: the name of the menu ("System"), then the user's name
 #: ../src/service.c:194
@@ -73,24 +69,24 @@ msgstr ""
 
 #: ../src/service.c:332
 msgid "Guest"
-msgstr ""
+msgstr "Հյուր"
 
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "«%s»-ի Ձեռնարկ…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "Սարքի Մասին…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "Համակարգչի Մասին"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "Հայտնել վրիպակի մասին"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
@@ -98,7 +94,7 @@ msgstr ""
 
 #: ../src/service.c:487
 msgid "System Settings…"
-msgstr ""
+msgstr "Կարգավորումներ…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
@@ -106,31 +102,31 @@ msgstr ""
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Միացնել Էկրանապահիչը"
 
 #: ../src/service.c:700 ../src/service.c:716
 msgid "Switch Account…"
-msgstr ""
+msgstr "Փոխել Հաշիվը…"
 
 #: ../src/service.c:701 ../src/service.c:717
 msgid "Switch Account"
-msgstr ""
+msgstr "Փոխել Հաշիվը"
 
 #: ../src/service.c:713
 msgid "Lock/Switch Account…"
-msgstr ""
+msgstr "Կողպել/Փոխել Հաշիվը…"
 
 #: ../src/service.c:714
 msgid "Lock/Switch Account"
-msgstr ""
+msgstr "Կողպել/Փոխել Հաշիվը"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "Կողպել"
 
 #: ../src/service.c:745
 msgid "Guest Session"
-msgstr "Հյուրական նիստ"
+msgstr "Հյուրի սեանս"
 
 #: ../src/service.c:822
 msgid "Log Out…"
@@ -146,7 +142,7 @@ msgstr "Ննջել"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "Վերագործարկ..."
+msgstr "Վերաբեռնել…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"

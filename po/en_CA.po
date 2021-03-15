@@ -8,30 +8,27 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-04-17 18:43+0000\n"
-"Last-Translator: Mark <Unknown>\n"
-"Language-Team: English (Canada) <en_CA@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-03-13 12:33+0000\n"
+"Last-Translator: Ryan Argente <rargente@lonerider.one>\n"
+"Language-Team: English (Canada) <https://translate.ubports.com/projects/"
+"ubports/indicator-session/en_CA/>\n"
+"Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr ""
-"Are you sure you want to close all programs and log out of the computer?"
+msgstr "Are you sure you want to close all programs and log out?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
-msgstr "Some software updates won't apply until the computer next restarts."
+msgstr ""
+"Some software updates won't be applied until the computer next restarts."
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822
@@ -66,68 +63,68 @@ msgstr ""
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "System, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: ../src/service.c:332
 msgid "Guest"
-msgstr ""
+msgstr "Guest"
 
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s Help…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "About This Device…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "About This Computer"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "Report a bug"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "Desktop mode"
 
 #: ../src/service.c:487
 msgid "System Settings…"
-msgstr ""
+msgstr "System Settings…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr ""
+msgstr "Online Accounts…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Start Screen Saver"
 
 #: ../src/service.c:700 ../src/service.c:716
 msgid "Switch Account…"
-msgstr ""
+msgstr "Switch Account…"
 
 #: ../src/service.c:701 ../src/service.c:717
 msgid "Switch Account"
-msgstr ""
+msgstr "Switch Account"
 
 #: ../src/service.c:713
 msgid "Lock/Switch Account…"
-msgstr ""
+msgstr "Lock/Switch Account…"
 
 #: ../src/service.c:714
 msgid "Lock/Switch Account"
-msgstr ""
+msgstr "Lock/Switch Account"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "Lock"
 
 #: ../src/service.c:745
 msgid "Guest Session"
