@@ -8,26 +8,23 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-19 11:05+0000\n"
-"Last-Translator: Fran Diéguez <Unknown>\n"
-"Language-Team: Galician <gl@li.org>\n"
+"PO-Revision-Date: 2021-05-21 14:05+0000\n"
+"Last-Translator: Davidrebolomaga <davidre345@hotmail.com>\n"
+"Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
+"indicator-session/gl/>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr "Ten certeza de que desexa pechar todos os programas e saír da sesión?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr ""
@@ -68,11 +65,11 @@ msgstr ""
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "Sistema, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -81,63 +78,55 @@ msgstr "Convidado"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s Axuda…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "Sobre o dispositivo…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "Sobre este computador"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "Informar sobre un problema"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "Modo escritorio"
 
 #: ../src/service.c:487
 msgid "System Settings…"
-msgstr "Opcións do sistema..."
+msgstr "Opcións do sistema…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr "Contas en liña..."
+msgstr "Contas en liña…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Iniciar protector de pantalla"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "Cambiar conta de usuario..."
+msgstr "Cambiar conta…"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "Cambiar conta de usuario..."
+msgstr "Cambiar conta"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "Cambiar conta de usuario..."
+msgstr "Bloquear/Cambiar conta…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "Cambiar conta de usuario..."
+msgstr "Bloquear/Cambiar conta"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "Bloquear"
 
 #: ../src/service.c:745
 msgid "Guest Session"
@@ -145,7 +134,7 @@ msgstr "Sesión de convidado"
 
 #: ../src/service.c:822
 msgid "Log Out…"
-msgstr "Saír da sesión..."
+msgstr "Saír da sesión…"
 
 #: ../src/service.c:840
 msgid "Suspend"
@@ -157,11 +146,11 @@ msgstr "Hibernar"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "Reiniciar..."
+msgstr "Reiniciar…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"
-msgstr "Apagar..."
+msgstr "Apagar…"
 
 #~ msgid "Makes it so that the logout button doesn’t show in the session menu."
 #~ msgstr "Fai que o botón de saír da sesión non se mostre no menú de sesión."
