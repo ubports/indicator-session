@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-03-08 17:39+0000\n"
+"PO-Revision-Date: 2021-05-22 21:42+0000\n"
 "Last-Translator: dano6 <dano.kutka@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/ubports/"
 "indicator-session/sk/>\n"
@@ -94,11 +94,11 @@ msgstr "Desktop režim"
 
 #: ../src/service.c:487
 msgid "System Settings…"
-msgstr "Nastavenia systému..."
+msgstr "Nastavenia systému…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr "Online účty..."
+msgstr "Online účty…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
@@ -118,7 +118,7 @@ msgstr "Zamknúť/prepnúť účet…"
 
 #: ../src/service.c:714
 msgid "Lock/Switch Account"
-msgstr "Zamknúť/prepnúť účet..."
+msgstr "Zamknúť/prepnúť účet"
 
 #: ../src/service.c:720
 msgid "Lock"
@@ -126,11 +126,11 @@ msgstr "Zamknúť"
 
 #: ../src/service.c:745
 msgid "Guest Session"
-msgstr "Relácia pre hosťa"
+msgstr "Hosťovské sedenie"
 
 #: ../src/service.c:822
 msgid "Log Out…"
-msgstr "Odhlásiť sa..."
+msgstr "Odhlásiť sa…"
 
 #: ../src/service.c:840
 msgid "Suspend"
@@ -142,11 +142,11 @@ msgstr "Hibernovať"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "Reštartovať..."
+msgstr "Reštartovať…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"
-msgstr "Vypnúť..."
+msgstr "Vypnúť…"
 
 #~ msgid "Makes it so that the logout button doesn’t show in the session menu."
 #~ msgstr ""
