@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-01-05 01:43+0000\n"
+"PO-Revision-Date: 2021-06-01 23:45+0000\n"
 "Last-Translator: Daniel Frańczak <danielfranczak5@wp.pl>\n"
 "Language-Team: Polish <https://translate.ubports.com/projects/ubports/"
 "indicator-session/pl/>\n"
@@ -45,7 +45,7 @@ msgstr "Anuluj"
 #: ../src/backend-dbus/actions.c:780 ../src/backend-dbus/actions.c:782
 #: ../src/service.c:848
 msgid "Restart"
-msgstr "Uruchom komputer ponownie"
+msgstr "Uruchom ponownie"
 
 #: ../src/backend-dbus/actions.c:781
 msgid "Are you sure you want to close all programs and restart the computer?"
