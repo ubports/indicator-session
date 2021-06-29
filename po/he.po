@@ -8,26 +8,24 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-24 09:39+0000\n"
-"Last-Translator: Yaron <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-24 07:30+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
+"indicator-session/he/>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr "האם ברצונך לסגור את כל התכניות ולצאת מההפעלה?"
+msgstr "לסגור את כל התכניות ולצאת מהמערכת?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr "כמה מעדכוני התכנה לא יחולו עד להפעלה הבאה של המחשב."
@@ -64,11 +62,11 @@ msgstr "האם לסגור את כל התכניות ולכבות את המחשב?
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "מערכת, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "מערכת"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -77,23 +75,23 @@ msgstr "אורח"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "עזרה עבור %s…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "על המכשיר הזה…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "על המחשב הזה"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "דיווח על תקלה"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "מצב שולחן עבודה"
 
 #: ../src/service.c:487
 msgid "System Settings…"
@@ -105,35 +103,27 @@ msgstr "חשבונות מקוונים…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "הפעלת שומר מסך"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "החלפת חשבון משתמש…"
+msgstr "החלפת חשבון…"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "החלפת חשבון משתמש…"
+msgstr "החלפת חשבון"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "החלפת חשבון משתמש…"
+msgstr "נעילת/החלפת חשבון…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "החלפת חשבון משתמש…"
+msgstr "נעילת/החלפת חשבון"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "נעילה"
 
 #: ../src/service.c:745
 msgid "Guest Session"
