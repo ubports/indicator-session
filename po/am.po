@@ -8,29 +8,26 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-09-22 05:39+0000\n"
-"Last-Translator: samson <Unknown>\n"
-"Language-Team: Amharic <am@li.org>\n"
+"PO-Revision-Date: 2021-06-06 00:41+0000\n"
+"Last-Translator: Samson <sambelet@yahoo.com>\n"
+"Language-Team: Amharic <https://translate.ubports.com/projects/ubports/"
+"indicator-session/am/>\n"
 "Language: am\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
-msgstr "በእርግጥ ሁሉንም ፕሮግራሞች ዘግተው ከኮምፒዩተሩ መውጣት ይፈልጋሉ?"
+msgstr "በ እርግጥ ሁሉንም ፕሮግራሞች ዘግተው መውጣት ይፈልጋሉ?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
-msgstr "የአንዳንድ ሶፍትዌሮች ማሻሻያ ኮምፒዩተሩ እንደገና እስካልተነሳ ተፈጻሚ አይሆኑም"
+msgstr "የ አንዳንድ ሶፍትዌሮች ማሻሻያ ኮምፒዩተሩ እንደገና እስካልተነሳ ተፈጻሚ አይሆኑም"
 
 #: ../src/backend-dbus/actions.c:748 ../src/backend-dbus/actions.c:750
 #: ../src/service.c:822
@@ -64,11 +61,11 @@ msgstr "በእርግጥ ሁሉንም ፕሮግራሞች ዘግተው ኮምፒ�
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "ስርአት, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "ስርአት"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -77,15 +74,15 @@ msgstr "እንግዳ"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s እርዳታ…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "ስለዚህ አካል…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "ስለዚህ ኮምፒዩተር"
 
 #: ../src/service.c:466
 msgid "Report a bug"
@@ -93,7 +90,7 @@ msgstr ""
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "በ ዴስክቶፕ ዘዴ"
 
 #: ../src/service.c:487
 msgid "System Settings…"
@@ -101,47 +98,39 @@ msgstr "ስርአቱን ማሰናጃ…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr "የመስመር ላይ መግለጫ..."
+msgstr "የ መስመር ላይ መግለጫ…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "መመልከቻ ማዳኛ ማስጀመሪያ"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "የተጠቃሚ መግለጫ መቀየሪያ..."
+msgstr "መግለጫ መቀየሪያ…"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "የተጠቃሚ መግለጫ መቀየሪያ..."
+msgstr "መግለጫ መቀየሪያ..."
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "የተጠቃሚ መግለጫ መቀየሪያ..."
+msgstr "መቆለፊያ/መግለጫ መቀየሪያ…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "የተጠቃሚ መግለጫ መቀየሪያ..."
+msgstr "መቆለፊያ/መግለጫ መቀየሪያ..."
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "መቆለፊያ"
 
 #: ../src/service.c:745
 msgid "Guest Session"
-msgstr "የእንግዳ ክፍለጊዜ"
+msgstr "የ እንግዳ ክፍለ ጊዜ"
 
 #: ../src/service.c:822
 msgid "Log Out…"
-msgstr "መውጫ..."
+msgstr "መውጫ…"
 
 #: ../src/service.c:840
 msgid "Suspend"
@@ -153,11 +142,11 @@ msgstr "ማስተኛ"
 
 #: ../src/service.c:848
 msgid "Restart…"
-msgstr "እንደገና ማስጀመሪያ..."
+msgstr "እንደገና ማስጀመሪያ…"
 
 #: ../src/service.c:855
 msgid "Shut Down…"
-msgstr "ማጥፊያ..."
+msgstr "ማጥፊያ…"
 
 #~ msgid "Makes it so that the logout button doesn’t show in the session menu."
 #~ msgstr "የመውጫው ቁልፍ በክፍለ ጊዜው ዝርዝር ውስጥ እንዳይታይ ያደርገዋል"

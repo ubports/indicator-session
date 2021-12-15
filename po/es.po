@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-03-14 12:36+0000\n"
-"Last-Translator: Josué <j2g2rp@gmail.com>\n"
+"PO-Revision-Date: 2021-12-15 13:40+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
 "indicator-session/es/>\n"
 "Language: es\n"
@@ -22,8 +22,7 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 msgid "Are you sure you want to close all programs and log out?"
-msgstr ""
-"¿Está seguro de que quiere cerrar todos los programas y finalizar su sesión?"
+msgstr "¿Confirma que quiere cerrar todos los programas y finalizar la sesión?"
 
 #: ../src/backend-dbus/actions.c:743
 msgid ""
@@ -49,8 +48,7 @@ msgstr "Reiniciar"
 
 #: ../src/backend-dbus/actions.c:781
 msgid "Are you sure you want to close all programs and restart the computer?"
-msgstr ""
-"¿Está seguro de que quiere cerrar todos los programas y reiniciar el equipo?"
+msgstr "¿Confirma que quiere cerrar todos los programas y reiniciar el equipo?"
 
 #: ../src/backend-dbus/actions.c:805 ../src/backend-dbus/actions.c:807
 #: ../src/service.c:855
@@ -59,8 +57,7 @@ msgstr "Apagar"
 
 #: ../src/backend-dbus/actions.c:806
 msgid "Are you sure you want to close all programs and shut down the computer?"
-msgstr ""
-"¿Está seguro de que quiere cerrar todos los programas y apagar el equipo?"
+msgstr "¿Confirma que quiere cerrar todos los programas y apagar el equipo?"
 
 #. Translators: the name of the menu ("System"), then the user's name
 #: ../src/service.c:194
@@ -79,7 +76,7 @@ msgstr "Invitado"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr "%s ayuda…"
+msgstr "Ayuda de %s…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
@@ -119,11 +116,11 @@ msgstr "Cambiar de cuenta"
 
 #: ../src/service.c:713
 msgid "Lock/Switch Account…"
-msgstr "Bloquear/Cambiar de cuenta…"
+msgstr "Bloquear/cambiar de cuenta…"
 
 #: ../src/service.c:714
 msgid "Lock/Switch Account"
-msgstr "Bloquear/Cambiar de cuenta"
+msgstr "Bloquear/cambiar de cuenta"
 
 #: ../src/service.c:720
 msgid "Lock"

@@ -20,8 +20,6 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr "Æцæг дæ фæнды алы программæ дæр сыхкæнын, æмæ æттæмæ рахизын?"
 

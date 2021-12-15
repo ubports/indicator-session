@@ -20,14 +20,11 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr "모든 프로그램을 닫고 나가시겠습니까?"
 
 #: ../src/backend-dbus/actions.c:743
 #, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr "일부 소프트웨어 업데이트는 다음 다시 시작까지 적용되지 않습니다."
@@ -109,7 +106,6 @@ msgstr ""
 
 #: ../src/service.c:700 ../src/service.c:716
 #, fuzzy
-#| msgid "Online Accounts…"
 msgid "Switch Account…"
 msgstr "온라인 계정..."
 
@@ -119,7 +115,6 @@ msgstr ""
 
 #: ../src/service.c:713
 #, fuzzy
-#| msgid "Online Accounts…"
 msgid "Lock/Switch Account…"
 msgstr "온라인 계정..."
 

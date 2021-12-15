@@ -8,26 +8,26 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2011-07-17 17:00+0000\n"
-"Last-Translator: Mark Kwidzińsczi <mark@linuxcsb.org>\n"
-"Language-Team: Kashubian <csb@li.org>\n"
+"PO-Revision-Date: 2021-06-29 10:51+0000\n"
+"Last-Translator: Carlod <carlod@disroot.org>\n"
+"Language-Team: Kashubian <https://translate.ubports.com/projects/ubports/"
+"indicator-session/csb/>\n"
 "Language: csb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
-"X-Generator: Launchpad (build 14041)\n"
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr "Chcesz na gwës zamknąc wszëtczé programë ë wëlogòwac sã?"
 
 #: ../src/backend-dbus/actions.c:743
 #, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr "Dzél aktualizacëji bãdze aktiwnô pò zrëszeniu kòmpùtra znowa."
@@ -64,24 +64,24 @@ msgstr "Chcesz na gwës zamknąc wszëtczé programë ë wëłączëc kòmpùtr?
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "Systema, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "Systema"
 
 #: ../src/service.c:332
 msgid "Guest"
-msgstr ""
+msgstr "Gòsc"
 
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s Pòmòc…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "O Téju Urzãdzéniu…"
 
 #: ../src/service.c:462
 msgid "About This Computer"

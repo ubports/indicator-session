@@ -20,15 +20,12 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr ""
 "Сез чыннан да барлык кушымталарның эшен туктатып эшне тәмамларга җыенасызмы?"
 
 #: ../src/backend-dbus/actions.c:743
 #, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr "Кайбер яңалыклар санакны сүндереп кабызганнан соң гына керәчәк."

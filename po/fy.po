@@ -20,8 +20,6 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr ""
 "Witte jo it seker dat jo alle programma's wol slute en fan de kompjûter ôf "
@@ -29,7 +27,6 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:743
 #, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr ""
@@ -117,7 +114,6 @@ msgstr ""
 
 #: ../src/service.c:700 ../src/service.c:716
 #, fuzzy
-#| msgid "Online Accounts…"
 msgid "Switch Account…"
 msgstr "Online akkounts..."
 
@@ -127,7 +123,6 @@ msgstr ""
 
 #: ../src/service.c:713
 #, fuzzy
-#| msgid "Online Accounts…"
 msgid "Lock/Switch Account…"
 msgstr "Online akkounts..."
 
