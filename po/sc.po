@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-04-22 10:44+0000\n"
+"PO-Revision-Date: 2021-08-20 23:16+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
 "indicator-session/sc/>\n"
@@ -108,7 +108,7 @@ msgstr "Contos in lìnia…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Avia su sarva-ischermu"
 
 #: ../src/service.c:700 ../src/service.c:716
 msgid "Switch Account…"

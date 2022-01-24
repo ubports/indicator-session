@@ -20,14 +20,11 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr "ހުރިހާ ޕުރޮގުރާމެއް ނިއްވާލާފަ ކޮމްޕިއުޓާރ އިން ލޮގްއައުޓް ކޮއްލަނީތޯ ؟"
 
 #: ../src/backend-dbus/actions.c:743
 #, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr "ބައެއް ސޮފްޓުވެއަރ އަޕްޑޭޓުސް ރަނގަޅައް މަސަތްކަތް ކުރާނީ ކޮމްޕިއުޓަރ ރީސްޓާޓް ކުރުމައް ފަހު އެވެ."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-01-04 18:35+0000\n"
+"PO-Revision-Date: 2021-08-20 22:18+0000\n"
 "Last-Translator: Florian Leeber <flori@bin.org.in>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "indicator-session/de/>\n"
@@ -21,17 +21,11 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-09-27 15:12+0000\n"
 
 #: ../src/backend-dbus/actions.c:742
-#, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr ""
-"Sind Sie sicher, dass Sie alle Programme schließen und sich vom Rechner "
-"abmelden wollen?"
+"Sind Sie sicher, dass Sie alle Programme schließen und sich abmelden wollen?"
 
 #: ../src/backend-dbus/actions.c:743
-#, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr ""
@@ -74,11 +68,11 @@ msgstr ""
 #: ../src/service.c:194
 #, c-format
 msgid "System, %s"
-msgstr ""
+msgstr "System, %s"
 
 #: ../src/service.c:198
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #: ../src/service.c:332
 msgid "Guest"
@@ -87,23 +81,23 @@ msgstr "Gast"
 #: ../src/service.c:457
 #, c-format
 msgid "%s Help…"
-msgstr ""
+msgstr "%s Hilfe…"
 
 #: ../src/service.c:460
 msgid "About This Device…"
-msgstr ""
+msgstr "Über dieses Gerät…"
 
 #: ../src/service.c:462
 msgid "About This Computer"
-msgstr ""
+msgstr "Über diesen Computer"
 
 #: ../src/service.c:466
 msgid "Report a bug"
-msgstr ""
+msgstr "Einen Fehler melden"
 
 #: ../src/service.c:471
 msgid "Desktop mode"
-msgstr ""
+msgstr "Desktop-Modus"
 
 #: ../src/service.c:487
 msgid "System Settings…"
@@ -115,35 +109,27 @@ msgstr "Online Accounts …"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
-msgstr ""
+msgstr "Bildschirmschoner starten"
 
 #: ../src/service.c:700 ../src/service.c:716
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
-msgstr "Benutzerkonto wechseln …"
+msgstr "Konto wechseln …"
 
 #: ../src/service.c:701 ../src/service.c:717
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
-msgstr "Benutzerkonto wechseln …"
+msgstr "Konto wechseln"
 
 #: ../src/service.c:713
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
-msgstr "Benutzerkonto wechseln …"
+msgstr "Konto sperren/wechseln…"
 
 #: ../src/service.c:714
-#, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
-msgstr "Benutzerkonto wechseln …"
+msgstr "Konto sperren/wechseln …"
 
 #: ../src/service.c:720
 msgid "Lock"
-msgstr ""
+msgstr "Sperren"
 
 #: ../src/service.c:745
 msgid "Guest Session"

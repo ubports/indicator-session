@@ -20,8 +20,6 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr ""
 "அனைத்து நிரல்களையும் மூடி உங்களது கணினியை விடுபதிகை செய்ய நீங்கள் உறுதியாக உள்ளீர்களா?"

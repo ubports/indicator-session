@@ -20,14 +20,11 @@ msgstr ""
 
 #: ../src/backend-dbus/actions.c:742
 #, fuzzy
-#| msgid ""
-#| "Are you sure you want to close all programs and log out of the computer?"
 msgid "Are you sure you want to close all programs and log out?"
 msgstr "Sètz segur que volètz quitar totes los programas e tampar la sesilha ?"
 
 #: ../src/backend-dbus/actions.c:743
 #, fuzzy
-#| msgid "Some software updates won't apply until the computer next restarts."
 msgid ""
 "Some software updates won't be applied until the computer next restarts."
 msgstr ""
@@ -113,25 +110,21 @@ msgstr ""
 
 #: ../src/service.c:700 ../src/service.c:716
 #, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account…"
 msgstr "Cambiar de compte d'utilizaire..."
 
 #: ../src/service.c:701 ../src/service.c:717
 #, fuzzy
-#| msgid "Switch User Account…"
 msgid "Switch Account"
 msgstr "Cambiar de compte d'utilizaire..."
 
 #: ../src/service.c:713
 #, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account…"
 msgstr "Cambiar de compte d'utilizaire..."
 
 #: ../src/service.c:714
 #, fuzzy
-#| msgid "Switch User Account…"
 msgid "Lock/Switch Account"
 msgstr "Cambiar de compte d'utilizaire..."
 
