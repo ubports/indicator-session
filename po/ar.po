@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-10-12 14:51+0000\n"
+"PO-Revision-Date: 2022-03-24 05:37+0000\n"
 "Last-Translator: HEROBRINE7GAMER <tapermeerkat77@gmail.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "indicator-session/ar/>\n"
@@ -40,7 +40,7 @@ msgstr "تسجيل الخروج"
 #: ../src/backend-dbus/actions.c:751 ../src/backend-dbus/actions.c:783
 #: ../src/backend-dbus/actions.c:808
 msgid "Cancel"
-msgstr "ألغِ"
+msgstr "إلغاء"
 
 #: ../src/backend-dbus/actions.c:780 ../src/backend-dbus/actions.c:782
 #: ../src/service.c:848

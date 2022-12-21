@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-08-20 22:18+0000\n"
-"Last-Translator: Florian Leeber <flori@bin.org.in>\n"
+"PO-Revision-Date: 2022-03-11 18:15+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "indicator-session/de/>\n"
 "Language: de\n"
@@ -125,7 +125,7 @@ msgstr "Konto sperren/wechseln…"
 
 #: ../src/service.c:714
 msgid "Lock/Switch Account"
-msgstr "Konto sperren/wechseln …"
+msgstr "Konto sperren/wechseln"
 
 #: ../src/service.c:720
 msgid "Lock"
