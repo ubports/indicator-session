@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: indicator-session\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-29 11:01+0200\n"
-"PO-Revision-Date: 2021-01-06 01:37+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"PO-Revision-Date: 2022-06-20 16:06+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "indicator-session/nl/>\n"
 "Language: nl\n"
@@ -102,7 +102,7 @@ msgstr "Systeeminstellingen…"
 
 #: ../src/service.c:489
 msgid "Online Accounts…"
-msgstr "Online accounts…"
+msgstr "Online-accounts…"
 
 #: ../src/service.c:692
 msgid "Start Screen Saver"
